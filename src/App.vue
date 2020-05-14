@@ -6,10 +6,10 @@
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Calibri;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
 }
 
@@ -24,5 +24,13 @@
       color: #42b983;
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  cursor: default;
+}
+
+body{
+  background: #374785;
 }
 </style>
