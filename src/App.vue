@@ -9,8 +9,8 @@
   font-family: Calibri;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
   color: #2c3e50;
+  text-align: left;
 }
 
 #nav {
@@ -24,6 +24,10 @@
       color: #42b983;
     }
   }
+}
+
+hr{
+  background: #3D529C;
 }
 
 h1, h2, h3, h4, h5, h6, p{

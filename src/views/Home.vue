@@ -16,5 +16,5 @@ export default {
     navbar: Navbar,
     jumbotron: Jumbotron
   }
-};
+}
 </script>
