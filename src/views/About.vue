@@ -7,35 +7,60 @@
           <b-card-text id="card-text">About Me</b-card-text>
           <hr>
           <b-row>
-            <b-col cols="sm-6">
+            <b-col cols="sm-4">
               <b-form-group label="First Name">
                 <b-form-input id="card-text-input" value="Jerome Joseph" disabled></b-form-input>
               </b-form-group>
+            </b-col>
+            <b-col cols="sm-4">
+              <b-form-group label="Last Name">
+                <b-form-input id="card-text-input" value="Villaruel" disabled></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col cols="sm-4">
+              <b-form-group label="Middle Name">
+                <b-form-input id="card-text-input" value="Robiato" disabled></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col cols="sm-4">
               <b-form-group label="Age">
                 <b-form-input id="card-text-input" value="22" disabled></b-form-input>
               </b-form-group>
-              <b-form-group label="Email">
-                <b-form-input id="card-text-input" value="jeromevillaruel1998@gmail.com" disabled></b-form-input>
+            </b-col>
+            <b-col cols="sm-4">
+              <b-form-group label="Birth Date">
+                <b-form-input id="card-text-input" value="September 13, 1998" disabled></b-form-input>
               </b-form-group>
+            </b-col>
+            <b-col cols="sm-4">
               <b-form-group label="Civil Status">
                 <b-form-input id="card-text-input" value="Single" disabled></b-form-input>
               </b-form-group>
             </b-col>
+            <b-col cols="12">
+              <hr>
+            </b-col>
             <b-col cols="sm-6">
-              <b-form-group label="Last Name">
-                <b-form-input id="card-text-input" value="Villaruel" disabled></b-form-input>
-              </b-form-group>
-              <b-form-group label="Birth Date">
-                <b-form-input id="card-text-input" value="September 13, 1998" disabled></b-form-input>
-              </b-form-group>
               <b-form-group label="Gender">
                 <b-form-input id="card-text-input" value="Male" disabled></b-form-input>
               </b-form-group>
+            </b-col>
+            <b-col cols="sm-6">
               <b-form-group label="Religion">
                 <b-form-input id="card-text-input" value="Roman Catholic" disabled></b-form-input>
               </b-form-group>
             </b-col>
-            <b-col cols="12">
+            <b-col cols="sm-6">
+              <b-form-group label="Gmail">
+                <b-form-input id="card-text-input" value="jeromevillaruel1998@gmail.com" disabled></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col cols="sm-6">
+              <b-form-group label="Yahoo Mail">
+                <b-form-input id="card-text-input" value="jeromevillaruel1998@yahoo.com" disabled></b-form-input>
+              </b-form-group>
+            </b-col>
+            <b-col cols="sm-12">
               <b-form-group label="Address">
                 <b-form-input id="card-text-input" value="928 Bonifacio St. Brgy. Guerrero, Bato, Leyte, Philippines" disabled></b-form-input>
               </b-form-group>

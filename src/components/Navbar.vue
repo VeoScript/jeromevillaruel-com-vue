@@ -1,17 +1,17 @@
 <template>
   <div>
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
-      <b-navbar-brand href="#">veoscript.official</b-navbar-brand>
+      <b-navbar-brand href="/">veoscript.official</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto mr-5">
           <router-link to="/" class="nav-link">Home</router-link>
-          <router-link to="/" class="nav-link">Blogs</router-link>
+          <router-link to="/Blog" class="nav-link">Blog</router-link>
           <router-link to="/About" class="nav-link">About</router-link>
           <router-link to="/Education" class="nav-link">Education</router-link>
-          <router-link to="/" class="nav-link">Projects</router-link>
+          <router-link to="/Projects" class="nav-link">Projects</router-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
