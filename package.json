@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --mode development",
+    "lint": "vue-cli-service lint",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
@@ -14,6 +16,8 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.6.4",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3"

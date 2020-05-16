@@ -10,6 +10,7 @@
           <router-link to="/" class="nav-link">Home</router-link>
           <router-link to="/Blog" class="nav-link">Blog</router-link>
           <router-link to="/About" class="nav-link">About</router-link>
+          <router-link to="/" class="nav-link">Photos</router-link>
           <router-link to="/Education" class="nav-link">Education</router-link>
           <router-link to="/Projects" class="nav-link">Projects</router-link>
         </b-navbar-nav>
