@@ -39,7 +39,7 @@
           </b-row>
         </b-tab>
       </b-tabs>
-    <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage.</p>
+    <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
   </div>
 </template>
 

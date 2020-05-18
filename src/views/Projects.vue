@@ -15,7 +15,7 @@
                     Available for all coffee shops for free. <br>
                     -Written in Visual Basic.
                   </b-card-text>
-                  <b-button href="https://github.com/VeoScript/KPHN-Kapihan" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+                  <b-button id="btngotogithub" href="https://github.com/VeoScript/KPHN-Kapihan" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -33,7 +33,7 @@
                     This program is available and you can use this to your parking lot area. <br>
                     -Written in Visual Basic.
                   </b-card-text>
-                  <b-button href="https://github.com/VeoScript/Automated-Parking-Monitoring-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+                  <b-button id="btngotogithub" href="https://github.com/VeoScript/Automated-Parking-Monitoring-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -51,7 +51,7 @@
                     This program is implemented in LEYECO IV Leyte Electric Cooperative IV, Inc. <br>
                     -Written in C#.
                   </b-card-text>
-                  <b-button href="https://github.com/VeoScript/LeyecoIV-Inventory-Management-and-POS-System" target="_blank" variant="primary" size="sm">View repository on Github</b-button>
+                  <b-button id="btngotogithub" href="https://github.com/VeoScript/LeyecoIV-Inventory-Management-and-POS-System" target="_blank" variant="primary" size="sm">View repository on Github</b-button>
                 </b-card-body>
               </b-col>
             </b-row>
@@ -70,14 +70,14 @@
                     DAFENHS Don Agustin F. Escaño National High School. <br>
                     -Written in Visual Basic.
                   </b-card-text>
-                  <b-button href="https://github.com/VeoScript/DAFENHS-Automated-Enrollment-System" target="_blank" variant="primary" size="sm">View repository on Github</b-button>
+                  <b-button id="btngotogithub" href="https://github.com/VeoScript/DAFENHS-Automated-Enrollment-System" target="_blank" variant="primary" size="sm">View repository on Github</b-button>
                 </b-card-body>
               </b-col>
             </b-row>
           </b-card>
         </b-col>
       </b-row>
-      <p id="copyright" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage.</p>
+      <p id="copyright" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
   </div>
 </template>
 
@@ -102,5 +102,10 @@ export default {
     font-size: 25px;
     font-weight: bolder;
     color: #fff;
+  }
+
+  #btngotogithub{
+    background: #495DAC;
+    border: none;
   }
 </style>

@@ -26,10 +26,10 @@ const routes = [
       import(/* webpackChunkName: "education" */ "../views/Education.vue")
   },
   {
-    path: "/blog",
-    name: "Blog",
+    path: "/freedomwall",
+    name: "FreedomWall",
     component: () =>
-      import(/* webpackChunkName: "blog" */ "../views/Blog.vue")
+      import(/* webpackChunkName: "blog" */ "../views/Freedomwall.vue")
   },
   {
     path: "/projects",

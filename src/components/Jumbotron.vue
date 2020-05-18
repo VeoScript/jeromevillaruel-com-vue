@@ -11,7 +11,7 @@
           <b-avatar href="https://facebook.com/veoscript" target="_blank" id="facebooklink" v-b-tooltip.hover title="Follow me on Facebook"><font-awesome-icon :icon="['fab', 'facebook']" /></b-avatar>&nbsp;
           <b-avatar href="https://twitter.com/VeoScript43" target="_blank" id="twitterlink" v-b-tooltip.hover title="Follow me on Twitter"><font-awesome-icon :icon="['fab', 'twitter']" /></b-avatar>&nbsp;
           <b-avatar href="https://github.com/VeoScript" target="_blank" id="githublink" v-b-tooltip.hover title="Follow me on Github and give a star for my repositories"><font-awesome-icon :icon="['fab', 'github']" /></b-avatar>&nbsp;
-           
+
           <hr class="my-4">
         </b-col>
 
@@ -22,7 +22,7 @@
         </b-col>
         <b-col cols="sm-4">
           <b-input-group class="mb-1" prepend="Email">
-            <b-form-input :type="email"></b-form-input>
+            <b-form-input></b-form-input>
             <b-input-group-append>
               <b-button size="sm" text="Button" variant="primary">Subscribe</b-button>
             </b-input-group-append>
@@ -31,7 +31,7 @@
         </b-col>
       </b-row>
     </b-jumbotron>
-    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage.</p>
+    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
   </div>
 </template>
 
@@ -74,6 +74,10 @@ export default {
 
   #githublink{
     background: #545B62;
+  }
+
+  #linkedinlink{
+    background: #275380;
   }
 
   #copyright-home{
