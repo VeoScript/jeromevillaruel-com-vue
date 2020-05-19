@@ -22,12 +22,27 @@
         </b-col>
         <b-col cols="sm-4">
           <b-input-group class="mb-1" prepend="Email">
-            <b-form-input :type="email"></b-form-input>
+            <b-form-input 
+              type="email" 
+              v-model.trim="$v.email.$model"
+              :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
+            >
+            </b-form-input>
             <b-input-group-append>
-              <b-button size="sm" text="Button" variant="primary">Subscribe</b-button>
+              <b-button 
+                size="sm" 
+                text="Button" 
+                variant="primary"
+                @click="subscribe">
+                Subscribe
+              </b-button>
             </b-input-group-append>
           </b-input-group>
-          <h3 class="text-center"><b id="n-subscribers">0</b>&nbsp;<small>Subscribers.</small></h3>
+          <h3 class="text-center"><b id="n-subscribers">
+            {{ subscriberCount ? subscriberCount.aggregate.count : 0 }}
+            </b>&nbsp;
+            <small>Subscribers</small>
+          </h3>
         </b-col>
       </b-row>
     </b-jumbotron>
@@ -36,8 +51,53 @@
 </template>
 
 <script>
-export default {
 
+
+import { required, email } from 'vuelidate/lib/validators'
+import { ADD_SUBSCRIBER_MUTATION } from '@/graphql/mutations'
+import { COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
+
+export default {
+      name: 'Jumbotron',
+
+      data () {
+        return {
+           email: ''
+        }
+      },
+
+      validations: {
+        email: {
+            required,
+            email
+        }
+      },
+
+      methods: {
+        subscribe() {
+          this.$v.$touch()
+            if (!this.$v.$invalid) {
+
+               this.$apollo.mutate({
+                 mutation: ADD_SUBSCRIBER_MUTATION,
+                 variables: {
+                   email: this.email
+                 },
+                 refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
+               }).then(() => {
+                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
+                  this.email = ''
+               }).catch(error => console.log(error))
+      
+            }
+        }
+      },
+
+      apollo: {
+        subscriberCount: {
+          query: COUNT_ALL_SUBSCRIBER_QUERY
+        }
+      }
 }
 </script>
 
