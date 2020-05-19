@@ -65,7 +65,7 @@
                 <b-form-input id="card-text-input" value="928 Bonifacio St. Brgy. Guerrero, Bato, Leyte, Philippines" disabled></b-form-input>
               </b-form-group>
               <b-form-group label="Bio">
-                <b-form-textarea id="card-text-input" rows="5" value="To say I dabble would be understatement, design is my passion. I have a range of skills in the creative fields specializing in user experience & user interface design, interactive design and front-end development. I love solving problems and creating beautiful functional work." disabled></b-form-textarea>
+                <b-form-textarea id="card-text-input" rows="6" value="To say I dabble would be understatement, design is my passion. I have a range of skills in the creative fields specializing in user experience & user interface design, interactive design and front-end development. I love solving problems and creating beautiful functional work." disabled></b-form-textarea>
               </b-form-group>
             </b-col>
           </b-row>
@@ -108,7 +108,7 @@
             </b-col>
           </b-row>
         </b-card>
-        <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage.</p>
+        <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
       </b-col>
     </b-row>
   </div>

@@ -1,0 +1,101 @@
+<template>
+  <div class="freedomwall">
+    <navbar></navbar>
+    <b-container class="mt-4">
+      <b-row class="justify-content-center">
+        <b-col sm="4" class="mb-2">
+          <b-card title="Freedom Wall" id="card-about">
+            <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
+            <hr>
+            <b-form-group  label="Name" label-for="txtname" description="Enter your name so that we know your identity.">
+              <b-form-input id="txtname" required></b-form-input>
+            </b-form-group>
+            <b-form-group label="Post anything here..." label-for="txtpost">
+              <b-textarea id="txtpost" required></b-textarea>
+            </b-form-group>
+            <b-button variant="primary" class="float-right mt-2" id="btnpost">Post</b-button >
+          </b-card>
+          <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+        </b-col>
+        <b-col sm="8">
+          <b-card id="card-about" class="mb-3">
+            <div class="fl">
+              <b-card-title>
+                Uknown User
+                <br><span id="lbldate">Posted on Saturday April 25th of 2020.</span>
+              </b-card-title>
+              <b-card-text max-width="100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odio neque commodi numquam. Quaerat delectus quae eos autem, exercitationem possimus quod excepturi ea incidunt inventore. Itaque voluptatibus architecto illo porro.
+              </b-card-text>
+              <br><span class="countreact"><b-icon icon="heart-fill"></b-icon> 0</span>&nbsp;
+              <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
+            </div>
+            <hr>
+            <div class="fr">
+              <b-button-group size="sm">
+                <b-button id="heart" variant="danger" v-b-tooltip.hover title="Heart">
+                  <b-icon icon="heart-fill"></b-icon>
+                </b-button>
+                <router-link to="/" class="btn btn-info" id="comment" v-b-tooltip.hover title="Comment">
+                  <b-icon icon="chat-square-dots-fill"></b-icon>
+                </router-link>
+                <router-link to="/" class="btn btn-secondary" id="report" v-b-tooltip.hover title="Report">
+                  <b-icon icon="exclamation-triangle-fill"></b-icon>
+                </router-link>
+              </b-button-group>
+            </div>
+          </b-card>
+        </b-col>
+      </b-row>
+    </b-container>
+  </div>
+</template>
+
+<script>
+import Navbar from "@/components/Navbar.vue";
+
+export default {
+  name: "FreedomWall",
+  components: {
+    navbar: Navbar
+  }
+}
+</script>
+
+<style>
+  #card-about{
+    background: #20284D;
+    color: #A8B3DB;
+  }
+
+  .text-muted{
+    color: #fff!important;
+  }
+
+  #copyright{
+    font-size: 12px;
+    color: #A8B3DB;
+  }
+
+  #txtname, #txtpost{
+    background: #495DAC;
+    border: 0;
+    color: #ffffff;
+  }
+
+  #lbldate{
+    font-size: 12px;
+    font-weight: lighter;
+    color: #778ce2;
+  }
+
+  #btnpost{
+    background: #495DAC;
+    border: none;
+  }
+
+  #heart{
+    background: #f66f6c;
+    border-color: #f66f6c;
+  }
+</style>
