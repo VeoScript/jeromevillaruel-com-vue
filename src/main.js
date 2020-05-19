@@ -16,7 +16,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
-import apolloProvider from '@/apollo'
+import apolloProvider from '@/apollo';
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
@@ -26,10 +26,10 @@ library.add(faTwitter)
 library.add(faGithub)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 Vue.use(Vuelidate)
-Vue.use(VueSweetalert2);
+Vue.use(VueSweetalert2)
 
 new Vue({
   router,
