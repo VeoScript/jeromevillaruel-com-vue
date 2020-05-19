@@ -16,6 +16,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import apolloProvider from '@/apollo'
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
@@ -33,5 +34,6 @@ Vue.use(VueSweetalert2);
 new Vue({
   router,
   store,
+  apolloProvider,
   render: h => h(App)
 }).$mount("#app");
