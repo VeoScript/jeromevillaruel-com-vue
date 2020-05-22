@@ -112,4 +112,10 @@ export default {
     background: #495DAC;
     border: none;
   }
+
+  #copyright-home{
+    font-size: 12px;
+    color: #A8B3DB;
+    text-align: center;
+  }
 </style>
