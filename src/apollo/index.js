@@ -6,9 +6,9 @@ import { HttpLink } from "apollo-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
 const httpLink = new HttpLink({
-  uri: "https://graphql-data.herokuapp.com/v1/graphql",
+  uri: "https://jeromevillaruel.herokuapp.com/v1/graphql",
   headers: {
-    'x-hasura-admin-secret': 'ilusmdm'
+    'x-hasura-admin-secret': 'VEOSCRIPT43'
   }
 });
 
