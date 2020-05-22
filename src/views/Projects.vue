@@ -77,7 +77,7 @@
           </b-card>
         </b-col>
       </b-row>
-      <p id="copyright" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+      <p id="copyright-home" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
   </div>
 </template>
 
