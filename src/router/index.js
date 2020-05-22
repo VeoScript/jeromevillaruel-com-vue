@@ -52,6 +52,7 @@ const router = new VueRouter({
 
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
+  NProgress.configure({ easing: 'ease', speed: 3000, showSpinner: false })
   if (to.name) {
       // Start the route progress bar.
       NProgress.start()
