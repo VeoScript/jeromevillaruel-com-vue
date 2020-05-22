@@ -17,3 +17,13 @@ query getCountSubscriber {
     }
   }  
 `
+
+export const GET_ALL_POSTS_FREEDOM_WALL = gql`
+query getAllPostFreedomWall {
+  freedom_wall(order_by: {created_at: desc}) {
+    id
+    name
+    posts
+  }
+}
+`
