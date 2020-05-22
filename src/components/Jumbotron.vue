@@ -28,13 +28,18 @@
               :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
             >
             </b-form-input>
-            <b-input-group-append>
+            <b-input-group-append >
               <b-button 
+                v-if="!loading"
                 size="sm" 
                 text="Button" 
                 variant="primary"
                 @click="subscribe">
                 Subscribe
+              </b-button>
+              <b-button v-else variant="primary" disabled>
+                <b-spinner small type="grow"></b-spinner>
+                Loading...
               </b-button>
             </b-input-group-append>
           </b-input-group>
@@ -62,7 +67,8 @@ export default {
 
       data () {
         return {
-           email: ''
+           email: '',
+           loading: false
         }
       },
 
@@ -77,7 +83,7 @@ export default {
         subscribe() {
           this.$v.$touch()
             if (!this.$v.$invalid) {
-
+               this.loading = true
                this.$apollo.mutate({
                  mutation: ADD_SUBSCRIBER_MUTATION,
                  variables: {
@@ -85,10 +91,10 @@ export default {
                  },
                  refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
                }).then(() => {
+                  this.loading = false
                   this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
                   this.email = ''
                }).catch(error => console.log(error))
-      
             }
         }
       },
