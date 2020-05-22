@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="fixed-top top">
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
       <b-navbar-brand href="/">veoscript.official</b-navbar-brand>
 

@@ -55,6 +55,10 @@ export default {
 </script>
 
 <style>
+  .education{
+    margin-top: 80px;
+  }
+
   #containertabs{
     background: #24315E;
     padding-bottom: 20px;

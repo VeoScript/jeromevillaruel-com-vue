@@ -126,6 +126,10 @@ export default {
 </script>
 
 <style>
+  .about{
+    margin-top: 80px;
+  }
+
   #card-about{
     background: #20284D;
     color: #A8B3DB;

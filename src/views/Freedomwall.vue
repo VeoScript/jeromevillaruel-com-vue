@@ -63,6 +63,10 @@ export default {
 </script>
 
 <style>
+  .freedomwall{
+    margin-top: 100px;
+  }
+
   #card-about{
     background: #20284D;
     color: #A8B3DB;

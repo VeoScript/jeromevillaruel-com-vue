@@ -112,6 +112,7 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
+    margin-top: 80px;
   }
 
   #n-subscribers{

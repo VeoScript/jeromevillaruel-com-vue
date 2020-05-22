@@ -1,8 +1,10 @@
 <template>
   <div class="notfound">
     <navbar></navbar>
-    <h1 class="nf text-center mt-5">404 Not Found</h1>
-    <h2 class="nf2 text-center">This page is unknown</h2>
+    <b-container class="nf-container">
+      <h1 class="nf text-center mt-5">404 Not Found</h1>
+      <h2 class="nf2 text-center">This page is unknown</h2>
+    </b-container>
   </div>
 </template>
 
@@ -17,6 +19,10 @@ export default {
 </script>
   
 <style>
+  .nf-container{
+    margin-top: 100px;
+  }
+
   .nf{
     color: #fff;
     font-weight: bolder;
