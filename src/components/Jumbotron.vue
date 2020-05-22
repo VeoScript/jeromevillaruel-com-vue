@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="circle" width="100" alt="placeholder" :src="require('../assets/photos/veoicon2.png')"></b-img>
+          <b-img rounded="circle" width="100" alt="placeholder" src="https://pbs.twimg.com/profile_images/1251393038410113025/zVNYo7WQ_200x200.jpg"></b-img>
           <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
@@ -28,13 +28,18 @@
               :class="{ 'is-invalid' : $v.email.$error, 'is-valid' : !$v.email.$invalid }"
             >
             </b-form-input>
-            <b-input-group-append>
+            <b-input-group-append >
               <b-button 
+                v-if="!loading"
                 size="sm" 
                 text="Button" 
                 variant="primary"
                 @click="subscribe">
                 Subscribe
+              </b-button>
+              <b-button v-else variant="primary" disabled>
+                <b-spinner small type="grow"></b-spinner>
+                Loading...
               </b-button>
             </b-input-group-append>
           </b-input-group>
@@ -62,7 +67,8 @@ export default {
 
       data () {
         return {
-           email: ''
+           email: '',
+           loading: false
         }
       },
 
@@ -77,7 +83,7 @@ export default {
         subscribe() {
           this.$v.$touch()
             if (!this.$v.$invalid) {
-
+               this.loading = true
                this.$apollo.mutate({
                  mutation: ADD_SUBSCRIBER_MUTATION,
                  variables: {
@@ -85,10 +91,10 @@ export default {
                  },
                  refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
                }).then(() => {
+                  this.loading = false
                   this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
                   this.email = ''
                }).catch(error => console.log(error))
-      
             }
         }
       },
