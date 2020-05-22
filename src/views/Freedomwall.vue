@@ -1,7 +1,10 @@
 <template>
   <div class="freedomwall">
     <navbar></navbar>
-    <b-container class="mt-4">
+    <div v-if="$apollo.loading" class="mt-3">
+       <spinner />
+    </div>
+    <b-container class="mt-4" v-else>
       <b-row class="justify-content-center">
         <b-col sm="4" class="mb-2">
           <b-card title="Freedom Wall" id="card-about">
@@ -22,7 +25,9 @@
               <div class="fl">
                 <b-card-title>
                   {{ capitalize(post.name) }}
-                  <br><span id="lbldate">Posted on {{ post.created_at.split('T')[0] }}</span>
+                  <br><span id="lbldate">
+                    Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon>
+                  </span>
                 </b-card-title>
                 <b-card-text max-width="100">
                     {{ post.posts }}
@@ -53,7 +58,6 @@
 
 <script>
 
-import Navbar from "@/components/Navbar.vue";
 import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
 
@@ -67,7 +71,8 @@ export default {
   },
 
   components: {
-    navbar: Navbar
+    navbar: () => import('@/components/Navbar.vue'),
+    Spinner: () => import('@/components/Spinner')
   },
 
   methods: {
