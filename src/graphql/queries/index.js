@@ -24,6 +24,7 @@ query getAllPostFreedomWall {
     id
     name
     posts
+    created_at
   }
 }
 `
