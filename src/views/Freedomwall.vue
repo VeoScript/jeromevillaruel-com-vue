@@ -52,13 +52,19 @@
 </template>
 
 <script>
+
 import Navbar from "@/components/Navbar.vue";
+import { POST_FREEDOM_WALL } from '@/graphql/mutations'
+import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
 
 export default {
   name: "FreedomWall",
+
   components: {
     navbar: Navbar
-  }
+  },
+
+
 }
 </script>
 
