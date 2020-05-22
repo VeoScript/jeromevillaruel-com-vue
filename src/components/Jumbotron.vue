@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="circle" width="100" alt="placeholder" :src="require('../assets/photos/veoicon2.png')"></b-img>
+          <b-img rounded="circle" width="100" alt="placeholder" src="https://pbs.twimg.com/profile_images/1251393038410113025/zVNYo7WQ_200x200.jpg"></b-img>
           <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
