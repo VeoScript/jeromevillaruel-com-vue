@@ -11,10 +11,18 @@
             <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
             <hr>
             <b-form-group  label="Name" label-for="txtname" description="Enter your name so that we know your identity.">
-              <b-form-input id="txtname" required></b-form-input>
+              <b-form-input 
+                id="txtname" 
+                v-model.trim="$v.name.$model"
+                :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
+              ></b-form-input>
             </b-form-group>
             <b-form-group label="Post anything here..." label-for="txtpost">
-              <b-textarea id="txtpost" required></b-textarea>
+              <b-textarea 
+                id="txtpost" 
+                v-model.trim="$v.freedomWords.$model"
+                :class="{ 'is-invalid' : $v.freedomWords.$error, 'is-valid' : !$v.freedomWords.$invalid }"
+              ></b-textarea>
             </b-form-group>
             <b-button variant="primary" class="float-right mt-2" id="btnpost">Post</b-button >
           </b-card>
@@ -26,7 +34,7 @@
                 <b-card-title>
                   {{ capitalize(post.name) }}
                   <br><span id="lbldate">
-                    Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon>
+                    Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                   </span>
                 </b-card-title>
                 <b-card-text max-width="100">
@@ -60,13 +68,25 @@
 
 import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
+import { required } from 'vuelidate/lib/validators'
 
 export default {
   name: "FreedomWall",
 
   data () {
     return {
-      posts: []
+      posts: [],
+      name: '',
+      freedomWords: ''
+    }
+  },
+
+  validations: {
+    name: {
+        required
+    },
+    freedomWords: {
+      required
     }
   },
 
