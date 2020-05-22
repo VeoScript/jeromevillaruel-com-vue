@@ -10,7 +10,7 @@
           <b-card title="Freedom Wall" id="card-about">
             <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
             <hr>
-            <b-form-group  label="Name" label-for="txtname" description="Enter your name so that we know your identity.">
+            <b-form-group  label="Name" label-for="txtname">
               <b-form-input 
                 id="txtname" 
                 v-model.trim="$v.name.$model"
