@@ -37,4 +37,9 @@ h1, h2, h3, h4, h5, h6, p, span{
 body{
   background: #374785;
 }
+
+#nprogress .bar {
+  background: rgb(255, 255, 255) !important;
+  /* box-shadow: none !important; */
+}
 </style>
