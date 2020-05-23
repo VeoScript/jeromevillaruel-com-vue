@@ -3,8 +3,8 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="circle" width="100" alt="placeholder" :src="require('../assets/photos/veoicon2.png')"></b-img>
-          <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
+          <b-img rounded="rounded" width="100" alt="placeholder" :src="require('../assets/photos/veoofficial_2.png')"></b-img>
+          <h1 class="mt-3 mb-1" id="j-1">Villaruel Jerome</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
           </h4>
@@ -43,15 +43,16 @@
               </b-button>
             </b-input-group-append>
           </b-input-group>
-          <h3 class="text-center"><b id="n-subscribers">
-            {{ subscriberCount ? subscriberCount.aggregate.count : 0 }}
+          <h3 class="text-center">
+            <b id="n-subscribers">
+              {{ subscriberCount ? subscriberCount.aggregate.count : 0 }}
             </b>&nbsp;
             <small>Subscribers</small>
           </h3>
         </b-col>
       </b-row>
     </b-jumbotron>
-    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage.</p>
+    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
   </div>
 </template>
 
@@ -92,7 +93,7 @@ export default {
                  refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
                }).then(() => {
                   this.loading = false
-                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
+                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel official website. Thank you.`)
                   this.email = ''
                }).catch(error => console.log(error))
             }
@@ -112,7 +113,7 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
-    margin-top: 80px;
+    margin-top: 65px;
   }
 
   #n-subscribers{
