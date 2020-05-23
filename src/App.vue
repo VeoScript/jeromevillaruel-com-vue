@@ -1,8 +1,19 @@
 <template>
   <div id="app">
-    <router-view />
+    <navbar></navbar>
+    <vue-page-transition name="fade-in-right" class="content">
+      <router-view />
+    </vue-page-transition>
   </div>
 </template>
+
+<script>
+export default {
+   components: {
+      Navbar: () => import('@/components/Navbar.vue'),
+   }
+}
+</script>
 
 <style lang="scss">
 #app {
