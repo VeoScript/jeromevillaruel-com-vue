@@ -76,7 +76,7 @@
                 <b-card-text max-width="100">
                     {{ post.posts }}
                 </b-card-text>
-                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>{{ post.react.aggregate.count }}</span>&nbsp;
+                <br><span class="countreact"><b-icon icon="heart-fill">&nbsp;</b-icon>{{ post.react.aggregate.count }}</span>&nbsp;
                 <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
               </div>
               <hr>
