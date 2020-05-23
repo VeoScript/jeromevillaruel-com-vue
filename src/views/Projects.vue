@@ -93,6 +93,10 @@ export default {
 </script>
 
 <style>
+  .projects{
+    margin-top: 100px;
+  }
+
   #card-about{
     background: #20284D;
     color: #A8B3DB;
@@ -107,5 +111,11 @@ export default {
   #btngotogithub{
     background: #495DAC;
     border: none;
+  }
+
+  #copyright-home{
+    font-size: 12px;
+    color: #A8B3DB;
+    text-align: center;
   }
 </style>

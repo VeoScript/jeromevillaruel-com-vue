@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="fixed-top top">
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
-      <b-navbar-brand href="/">veoscript.official</b-navbar-brand>
+      <b-navbar-brand href="/">VEOSCRIPT<span class="subtitle">.official</span></b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -34,5 +34,12 @@ export default {
     font-family: Mr Grieves;
     font-weight: bolder;
     color: #fff;
+  }
+
+  .subtitle{
+    font-family: 'Corbel';
+    font-size: 12px;
+    color: #dbdbdb;
+    cursor: pointer;
   }
 </style>

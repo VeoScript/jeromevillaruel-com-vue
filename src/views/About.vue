@@ -94,7 +94,7 @@
               <b-card-text id="card-text">Work Experience</b-card-text>
               <hr>
               <b-form-group label="IT Coordinator - Present">
-                <b-form-input id="card-text-input" value="Specialty Pulp Manufacturing, Inc." disabled></b-form-input>
+                <b-form-input id="card-text-input" value="Specialty Pulp Manufacturing, Inc. (SPMI)" disabled></b-form-input>
                 <span id="workaddress">Brgy. Hilapnitan, Baybay City, Leyte, Philippines</span>
               </b-form-group>   
               <b-form-group label="Former Graphic Designer">
@@ -126,6 +126,10 @@ export default {
 </script>
 
 <style>
+  .about{
+    margin-top: 80px;
+  }
+
   #card-about{
     background: #20284D;
     color: #A8B3DB;

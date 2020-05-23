@@ -76,7 +76,7 @@
                 <b-card-text max-width="100">
                     {{ post.posts }}
                 </b-card-text>
-                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>{{ post.react.aggregate.count }}</span>&nbsp;
+                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp;{{ post.react.aggregate.count }}</span>&nbsp;
                 <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
               </div>
               <hr>
@@ -190,6 +190,10 @@ export default {
 </script>
 
 <style>
+  .freedomwall{
+    margin-top: 100px;
+  }
+
   #card-about{
     background: #20284D;
     color: #A8B3DB;

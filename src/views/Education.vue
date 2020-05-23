@@ -55,6 +55,10 @@ export default {
 </script>
 
 <style>
+  .education{
+    margin-top: 80px;
+  }
+
   #containertabs{
     background: #24315E;
     padding-bottom: 20px;
@@ -118,5 +122,11 @@ export default {
 
   #school-link{
     color: #72AECB;
+  }
+
+  #copyright-home{
+    font-size: 12px;
+    color: #A8B3DB;
+    text-align: center;
   }
 </style>
