@@ -66,9 +66,12 @@
 
 <script>
 
+import { required } from 'vuelidate/lib/validators'
+
 import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
-import { required } from 'vuelidate/lib/validators'
+import { GET_ALL_POSTS_FREEDOM_WALL_SUBSCRIPTION } from '@/graphql/subscriptions'
+
 
 export default {
   name: "FreedomWall",
