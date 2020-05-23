@@ -10,7 +10,24 @@
         <b-icon icon="heart-fill"></b-icon>
         </b-button>
 
-         <b-modal v-model="heartModal">{{ post_id }}</b-modal>
+        <b-modal 
+            v-model="heartModal" 
+            hide-footer
+            title="Put your name to HEART REACT"
+        >
+             <form ref="form">
+                <b-form-group
+                    label="Name"
+                    label-for="name-input"
+                >
+                    <b-form-input
+                        id="name-input"
+                        v-model="name"
+                    ></b-form-input>
+                </b-form-group>
+                <b-button class="btn btn-danger btn-md" block @click="reactHeart">Heart React</b-button>
+            </form>
+        </b-modal>
 
         <b-button class="btn btn-info" id="comment" v-b-tooltip.hover title="Comment">
         <b-icon icon="chat-square-dots-fill"></b-icon>
@@ -32,9 +49,18 @@ export default {
 
     data () {
         return {
-            heartModal: false
+            heartModal: false,
+            name: '',
+            names: []
         }
     },
+
+    methods: {
+        reactHeart() {
+            
+            this.heartModal = false
+        }
+    }
 
 }
 </script>
