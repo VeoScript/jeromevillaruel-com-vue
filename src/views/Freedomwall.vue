@@ -29,7 +29,9 @@
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
         </b-col>
         <b-col sm="8" >
-           <b-card id="card-about" class="mb-3" v-for="(post, index) in posts" :key="index">
+           <b-card id="card-about" class="mb-3" 
+              v-for="(post, index) in posts " :key="index"
+            >
               <div class="fl">
                 <b-card-title>
                   {{ capitalize(post.name) }}
@@ -108,6 +110,19 @@ export default {
   apollo: {
     freedom_wall: {
       query: GET_ALL_POSTS_FREEDOM_WALL,
+      subscribeToMore: {
+        document: GET_ALL_POSTS_FREEDOM_WALL_SUBSCRIPTION,
+        updateQuery(previousResult, { subscriptionData }) {
+          if (previousResult) {
+            return {
+              freedom_wall: [
+                ...subscriptionData.data.freedom_wall,
+                ...previousResult.freedom_wall
+              ]
+            }
+          }
+        }
+      },
       result ({ data }) {
         this.posts = data.freedom_wall
       }
