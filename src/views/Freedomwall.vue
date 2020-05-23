@@ -10,24 +10,41 @@
           <b-card title="Freedom Wall" id="card-about">
             <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
             <hr>
+
             <b-form-group  label="Name" label-for="txtname">
               <b-form-input 
                 id="txtname" 
                 v-model.trim="$v.name.$model"
                 :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
               ></b-form-input>
-            </b-form-group>
+              <div class="invalid-feedback feedback">
+                  <span v-if="!$v.name.required">Name is required</span>
+                  <span v-if="!$v.name.minLength">Name must have at least {{ $v.name.$params.minLength.min }} letters. </span>
+                  <span v-if="!$v.name.maxLength">Name must have at most {{ $v.name.$params.maxLength.max }} letters.</span>
+              </div>
+
+            </b-form-group> <!-- full name button -->
+
             <b-form-group label="Post anything here..." label-for="txtpost">
               <b-textarea 
                 id="txtpost" 
                 v-model.trim="$v.freedomWords.$model"
                 :class="{ 'is-invalid' : $v.freedomWords.$error, 'is-valid' : !$v.freedomWords.$invalid }"
               ></b-textarea>
-            </b-form-group>
-            <b-button variant="primary" class="float-right mt-2" id="btnpost">Post</b-button >
+              <div class="invalid-feedback feedback">
+                  <span v-if="!$v.freedomWords.required">You posts is required</span>
+                  <span v-if="!$v.freedomWords.minLength">You posts must have at least {{ $v.freedomWords.$params.minLength.min }} letters. </span>
+                  <span v-if="!$v.freedomWords.maxLength">You posts must have at most {{ $v.freedomWords.$params.maxLength.max }} letters.</span>
+              </div>
+
+            </b-form-group> <!-- post text area button -->
+
+            <b-button variant="primary" class="float-right mt-2" id="btnpost" @click="freedomPost">Post</b-button > <!-- posts button -->
+
           </b-card>
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
         </b-col>
+
         <b-col sm="8" >
            <b-card id="card-about" class="mb-3" 
               v-for="(post, index) in freedom_wall " :key="index"
@@ -61,6 +78,7 @@
               </div>
             </b-card>
         </b-col>
+
       </b-row>
     </b-container>
   </div>
@@ -68,7 +86,7 @@
 
 <script>
 
-import { required } from 'vuelidate/lib/validators'
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 
 import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
@@ -88,10 +106,14 @@ export default {
 
   validations: {
     name: {
-        required
+        required,
+        minLength: minLength(5),
+        maxLength: maxLength(25)
     },
     freedomWords: {
-      required
+      required,
+      minLength: minLength(20),
+      maxLength: maxLength(200)
     }
   },
 
@@ -104,6 +126,12 @@ export default {
     capitalize(s) {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
+    },
+    freedomPost() {
+        this.$v.$touch()
+        if (!this.$v.$invalid) {
+           alert(this.name + " " + this.freedomWords)
+        }
     }
   },
 
