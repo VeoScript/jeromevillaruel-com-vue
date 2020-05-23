@@ -13,7 +13,7 @@
         <b-modal 
             v-model="heartModal" 
             hide-footer
-            title="Put your name to HEART REACT"
+            title="To confirm the heart reaction kindly type your name."
         >
              <form ref="form" @submit.prevent="reactHeart">
                 <b-form-group
@@ -34,7 +34,8 @@
                 </b-form-group>
                 <b-button
                     v-if="!loading"
-                    class="btn btn-danger btn-md" 
+                    class="btn btn-primary btn-md" 
+                    id="btnpost"
                     block 
                     @click="reactHeart">
                     Heart React
@@ -42,7 +43,8 @@
                 <b-button 
                     v-else 
                     disabled 
-                    class="btn btn-danger btn-md" 
+                    class="btn btn-primary btn-md" 
+                    id="btnpost"
                     block
                 >
                 <b-spinner small type="grow"></b-spinner>
@@ -114,3 +116,22 @@ export default {
 
 }
 </script>
+<style>
+  .modal-header{
+    background: #374785;
+    color: #fff;
+  }
+  
+  .modal-body{
+    background: #374785;
+    color: #fff;
+  }
+
+  .close{
+    color: #fff;
+  }
+
+  .close:hover{
+    color: #fff;
+  }
+</style>
