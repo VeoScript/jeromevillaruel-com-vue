@@ -30,3 +30,12 @@ subscription getCountSubscriber {
     }
   }  
 `
+
+export const GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION = gql`
+subscription getAllSubscriber {
+    villaruel_subscriber {
+      id
+      email
+    }
+  }
+`
