@@ -11,7 +11,31 @@ subscription getAllPostFreedomWall {
       aggregate {
         count
       }
+      nodes {
+        id
+        name
+      }
     }
   }
 }
+`
+
+
+export const COUNT_ALL_SUBSCRIBER_SUBSCRIPTION = gql`
+subscription getCountSubscriber {
+    subscriberCount: villaruel_subscriber_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }  
+`
+
+export const GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION = gql`
+subscription getAllSubscriber {
+    villaruel_subscriber {
+      id
+      email
+    }
+  }
 `

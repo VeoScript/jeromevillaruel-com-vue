@@ -3,8 +3,8 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="rounded" width="100" alt="placeholder" :src="require('../assets/photos/veoofficial_2.png')"></b-img>
-          <h1 class="mt-3 mb-1" id="j-1">Villaruel Jerome</h1>
+          <b-img rounded="circle" width="100" alt="placeholder" :src="require('../assets/photos/veoicon2.png')"></b-img>
+          <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
           </h4>
@@ -43,16 +43,15 @@
               </b-button>
             </b-input-group-append>
           </b-input-group>
-          <h3 class="text-center">
-            <b id="n-subscribers">
-              {{ subscriberCount ? subscriberCount.aggregate.count : 0 }}
+          <h3 class="text-center"><b id="n-subscribers" v-for="(c, i) in counter.slice(-1)" :key="i">
+            {{  c.id }}
             </b>&nbsp;
             <small>Subscribers</small>
           </h3>
         </b-col>
       </b-row>
     </b-jumbotron>
-    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage.</p>
   </div>
 </template>
 
@@ -61,7 +60,8 @@
 
 import { required, email } from 'vuelidate/lib/validators'
 import { ADD_SUBSCRIBER_MUTATION } from '@/graphql/mutations'
-import { COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
+import { GET_ALL_SUBSCRIBER_QUERY, COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
+import { GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION, COUNT_ALL_SUBSCRIBER_SUBSCRIPTION } from '@/graphql/subscriptions'
 
 export default {
       name: 'Jumbotron',
@@ -69,7 +69,8 @@ export default {
       data () {
         return {
            email: '',
-           loading: false
+           loading: false,
+           counter: null
         }
       },
 
@@ -93,7 +94,8 @@ export default {
                  refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
                }).then(() => {
                   this.loading = false
-                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel official website. Thank you.`)
+                  this.$v.$reset()
+                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
                   this.email = ''
                }).catch(error => console.log(error))
             }
@@ -101,8 +103,23 @@ export default {
       },
 
       apollo: {
-        subscriberCount: {
-          query: COUNT_ALL_SUBSCRIBER_QUERY
+        villaruel_subscriber: {
+          query: GET_ALL_SUBSCRIBER_QUERY,
+          subscribeToMore: {
+            document: GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION,
+            updateQuery(previousResult, { subscriptionData }) {
+              if (previousResult) {
+                return {
+                  villaruel_subscriber: [
+                    ...subscriptionData.data.villaruel_subscriber
+                  ]
+                }
+              }
+            }
+          },
+          result ({ data }) {
+            this.counter = data.villaruel_subscriber
+          }
         }
       }
 }
@@ -113,7 +130,6 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
-    margin-top: 65px;
   }
 
   #n-subscribers{

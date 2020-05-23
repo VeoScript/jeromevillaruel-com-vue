@@ -29,6 +29,10 @@ query getAllPostFreedomWall {
       aggregate {
         count
       }
+      nodes {
+        id
+        name
+      }
     }
   }
 }
