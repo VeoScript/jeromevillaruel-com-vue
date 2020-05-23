@@ -38,7 +38,7 @@
                     id="btnpost"
                     block 
                     @click="reactHeart">
-                    Heart React
+                    Confirm Reaction
                 </b-button>
                 <b-button 
                     v-else 
