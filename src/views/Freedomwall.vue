@@ -81,17 +81,11 @@
               </div>
               <hr>
               <div class="fr">
-                <b-button-group size="sm">
-                  <b-button id="heart" variant="danger" v-b-tooltip.hover title="Heart">
-                    <b-icon icon="heart-fill"></b-icon>
-                  </b-button>
-                  <router-link to="/" class="btn btn-info" id="comment" v-b-tooltip.hover title="Comment">
-                    <b-icon icon="chat-square-dots-fill"></b-icon>
-                  </router-link>
-                  <router-link to="/" class="btn btn-secondary" id="report" v-b-tooltip.hover title="Report">
-                    <b-icon icon="exclamation-triangle-fill"></b-icon>
-                  </router-link>
-                </b-button-group>
+
+                <button-actions 
+                   :post_id="post.id"
+                />
+
               </div>
             </b-card>
         </b-col>
@@ -118,7 +112,8 @@ export default {
       posts: [],
       name: '',
       freedomWords: '',
-      loading: false
+      loading: false,
+      heartModal: false
     }
   },
 
@@ -137,7 +132,8 @@ export default {
 
   components: {
     navbar: () => import('@/components/Navbar.vue'),
-    Spinner: () => import('@/components/Spinner')
+    Spinner: () => import('@/components/Spinner'),
+    ButtonActions: () => import('@/components/ButtonActions')
   },
 
   methods: {
