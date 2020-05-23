@@ -43,8 +43,8 @@
               </b-button>
             </b-input-group-append>
           </b-input-group>
-          <h3 class="text-center"><b id="n-subscribers">
-            {{ subscriberCount ? subscriberCount.aggregate.count : 0 }}
+          <h3 class="text-center"><b id="n-subscribers" v-for="(c, i) in counter.slice(-1)" :key="i">
+            {{  c.id }}
             </b>&nbsp;
             <small>Subscribers</small>
           </h3>
@@ -60,7 +60,8 @@
 
 import { required, email } from 'vuelidate/lib/validators'
 import { ADD_SUBSCRIBER_MUTATION } from '@/graphql/mutations'
-import { COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
+import { GET_ALL_SUBSCRIBER_QUERY, COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
+import { GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION, COUNT_ALL_SUBSCRIBER_SUBSCRIPTION } from '@/graphql/subscriptions'
 
 export default {
       name: 'Jumbotron',
@@ -68,7 +69,8 @@ export default {
       data () {
         return {
            email: '',
-           loading: false
+           loading: false,
+           counter: null
         }
       },
 
@@ -92,6 +94,7 @@ export default {
                  refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
                }).then(() => {
                   this.loading = false
+                  this.$v.$reset()
                   this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
                   this.email = ''
                }).catch(error => console.log(error))
@@ -100,8 +103,23 @@ export default {
       },
 
       apollo: {
-        subscriberCount: {
-          query: COUNT_ALL_SUBSCRIBER_QUERY
+        villaruel_subscriber: {
+          query: GET_ALL_SUBSCRIBER_QUERY,
+          subscribeToMore: {
+            document: GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION,
+            updateQuery(previousResult, { subscriptionData }) {
+              if (previousResult) {
+                return {
+                  villaruel_subscriber: [
+                    ...subscriptionData.data.villaruel_subscriber
+                  ]
+                }
+              }
+            }
+          },
+          result ({ data }) {
+            this.counter = data.villaruel_subscriber
+          }
         }
       }
 }
