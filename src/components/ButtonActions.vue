@@ -15,17 +15,39 @@
             hide-footer
             title="Put your name to HEART REACT"
         >
-             <form ref="form">
+             <form ref="form" @submit.prevent="reactHeart">
                 <b-form-group
                     label="Name"
                     label-for="name-input"
                 >
                     <b-form-input
                         id="name-input"
-                        v-model="name"
+                        v-model.trim="$v.reactName.$model"
+                        autocomplete="off"
+                        :class="{ 'is-invalid' : $v.reactName.$error, 'is-valid' : !$v.reactName.$invalid }"
                     ></b-form-input>
+                    <div class="invalid-feedback feedback">
+                        <span v-if="!$v.reactName.required">Name is required</span>
+                        <span v-if="!$v.reactName.minLength">Name must have at least {{ $v.reactName.$params.minLength.min }} letters. </span>
+                        <span v-if="!$v.reactName.maxLength">Name must have at most {{ $v.reactName.$params.maxLength.max }} letters.</span>
+                    </div>
                 </b-form-group>
-                <b-button class="btn btn-danger btn-md" block @click="reactHeart">Heart React</b-button>
+                <b-button
+                    v-if="!loading"
+                    class="btn btn-danger btn-md" 
+                    block 
+                    @click="reactHeart">
+                    Heart React
+                </b-button>
+                <b-button 
+                    v-else 
+                    disabled 
+                    class="btn btn-danger btn-md" 
+                    block
+                >
+                <b-spinner small type="grow"></b-spinner>
+                    Loading...
+                </b-button>
             </form>
         </b-modal>
 
@@ -45,6 +67,8 @@
 
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 
+import { HEART_REACT_MUTATION } from '@/graphql/mutations'
+
 export default {
     name: 'ButtonActions',
 
@@ -53,13 +77,13 @@ export default {
     data () {
         return {
             heartModal: false,
-            name: '',
-            names: []
+            reactName: '',
+            loading: false
         }
     },
 
     validations: {
-        name: {
+        reactName: {
             required,
             minLength: minLength(5),
             maxLength: maxLength(25)
@@ -68,8 +92,23 @@ export default {
 
     methods: {
         reactHeart() {
-
-            this.heartModal = false
+            this.$v.$touch()
+            if (!this.$v.$invalid) {
+                this.loading = true
+                const { reactName } = this.$data
+                this.$apollo.mutate({
+                    mutation: HEART_REACT_MUTATION,
+                    variables: {
+                        name: reactName,
+                        post_id: this.post_id
+                    }
+                }).then(() => {
+                    this.loading = false
+                    this.reactName = ''
+                    this.heartModal = false
+                    this.$v.$reset()
+                }).catch(error => console.log(error))
+            }
         }
     }
 
