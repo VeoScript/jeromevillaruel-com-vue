@@ -12,6 +12,10 @@ subscription getAllPostFreedomWall {
         count
       }
     }
+    nodes {
+      id
+      name
+    }
   }
 }
 `

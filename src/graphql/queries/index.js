@@ -30,6 +30,10 @@ query getAllPostFreedomWall {
         count
       }
     }
+    nodes {
+      id
+      name
+    }
   }
 }
 `
