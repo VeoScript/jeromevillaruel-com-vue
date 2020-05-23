@@ -29,10 +29,10 @@ query getAllPostFreedomWall {
       aggregate {
         count
       }
-    }
-    nodes {
-      id
-      name
+      nodes {
+        id
+        name
+      }
     }
   }
 }
