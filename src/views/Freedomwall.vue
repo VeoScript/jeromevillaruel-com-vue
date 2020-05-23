@@ -39,8 +39,25 @@
 
             </b-form-group> <!-- post text area button -->
 
-            <b-button variant="primary" class="float-right mt-2" id="btnpost" @click="freedomPost ">Post</b-button > <!-- posts button -->
-
+            <b-button 
+              variant="primary" 
+              class="float-right mt-2" 
+              id="btnpost" 
+              @click="freedomPost"
+              v-if="!loading"
+            >
+              Post
+            </b-button > <!-- posts button -->
+            <b-button 
+              v-else 
+              variant="primary" 
+              id="btnpost" 
+              disabled 
+              class="float-right mt-2" 
+            >
+              <b-spinner small type="grow"></b-spinner>
+              Loading...
+            </b-button>
           </b-card>
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
         </b-col>
@@ -100,7 +117,8 @@ export default {
     return {
       posts: [],
       name: '',
-      freedomWords: ''
+      freedomWords: '',
+      loading: false
     }
   },
 
@@ -130,10 +148,23 @@ export default {
     freedomPost() {
         this.$v.$touch()
         if (!this.$v.$invalid) {
-           
-           this.name = ''
-           this.freedomWords = ''
-           this.$v.$reset()
+
+           this.loading = true
+
+           const { name, freedomWords } = this.$data
+
+           this.$apollo.mutate({
+             mutation: POST_FREEDOM_WALL,
+             variables: {
+                 name: name, 
+                 posts: freedomWords
+             }
+           }).then(() => {
+              this.loading = false
+              this.name = ''
+              this.freedomWords = ''
+              this.$v.$reset()
+           }).catch(error => console.log(error))
         }
     }
   },
