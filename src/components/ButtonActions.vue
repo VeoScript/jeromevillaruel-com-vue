@@ -58,6 +58,14 @@ export default {
         }
     },
 
+    validations: {
+        name: {
+            required,
+            minLength: minLength(5),
+            maxLength: maxLength(25)
+        }
+    },
+
     methods: {
         reactHeart() {
 
