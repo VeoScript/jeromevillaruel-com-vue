@@ -30,7 +30,7 @@
         </b-col>
         <b-col sm="8" >
            <b-card id="card-about" class="mb-3" 
-              v-for="(post, index) in posts " :key="index"
+              v-for="(post, index) in freedom_wall " :key="index"
             >
               <div class="fl">
                 <b-card-title>
@@ -116,15 +116,11 @@ export default {
           if (previousResult) {
             return {
               freedom_wall: [
-                ...subscriptionData.data.freedom_wall,
-                ...previousResult.freedom_wall
+                ...subscriptionData.data.freedom_wall
               ]
             }
           }
         }
-      },
-      result ({ data }) {
-        this.posts = data.freedom_wall
       }
     }
   }
