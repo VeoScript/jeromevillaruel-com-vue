@@ -39,7 +39,7 @@
 
             </b-form-group> <!-- post text area button -->
 
-            <b-button variant="primary" class="float-right mt-2" id="btnpost" @click="freedomPost">Post</b-button > <!-- posts button -->
+            <b-button variant="primary" class="float-right mt-2" id="btnpost" @click="freedomPost ">Post</b-button > <!-- posts button -->
 
           </b-card>
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
@@ -130,7 +130,10 @@ export default {
     freedomPost() {
         this.$v.$touch()
         if (!this.$v.$invalid) {
-           alert(this.name + " " + this.freedomWords)
+           
+           this.name = ''
+           this.freedomWords = ''
+           this.$v.$reset()
         }
     }
   },
