@@ -42,6 +42,9 @@
 
 
 <script>
+
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+
 export default {
     name: 'ButtonActions',
 
@@ -57,7 +60,7 @@ export default {
 
     methods: {
         reactHeart() {
-            
+
             this.heartModal = false
         }
     }
