@@ -7,6 +7,11 @@ subscription getAllPostFreedomWall {
     name
     posts
     created_at
+    react: react_users_aggregate {
+      aggregate {
+        count
+      }
+    }
   }
 }
 `
