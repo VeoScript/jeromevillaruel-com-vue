@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="circle" width="100" alt="placeholder" :src="require('../assets/photos/veoicon2.png')"></b-img>
+          <b-img rounded="rounded" width="100" alt="placeholder" :src="require('../assets/photos/veoofficial_2.png')"></b-img>
           <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
@@ -130,6 +130,7 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
+    margin-top: 65px;
   }
 
   #n-subscribers{
