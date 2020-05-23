@@ -18,6 +18,7 @@ import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import apolloProvider from '@/apollo';
 import VueTimeago from 'vue-timeago'
+import VuePageTransition from 'vue-page-transition'
 
 library.add(faUserSecret)
 library.add(faFontAwesome)
@@ -31,6 +32,7 @@ Vue.config.productionTip = false
 
 Vue.use(Vuelidate)
 Vue.use(VueSweetalert2)
+Vue.use(VuePageTransition)
 
 Vue.use(VueTimeago, {
   locale: 'en',
