@@ -1,6 +1,5 @@
 <template>
   <div class="education">
-    <navbar></navbar>
       <b-tabs id="containertabs" content-class="mt-3" fill>
         <b-tab title="College" id="containertabstitle" active>
           <b-row class="justify-content-center text-center">

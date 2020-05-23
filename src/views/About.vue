@@ -1,6 +1,5 @@
 <template>
   <div class="about">
-    <navbar></navbar>
     <b-row class="mx-3 text-left">
       <b-col cols="sm-8" class="mt-3 mb-2">
         <b-card id="card-about">

@@ -1,6 +1,5 @@
 <template>
   <div class="freedomwall">
-    <navbar></navbar>
     <div v-if="$apollo.loading" class="mt-3">
        <spinner />
     </div>

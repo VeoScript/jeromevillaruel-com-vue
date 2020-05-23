@@ -1,6 +1,5 @@
 <template>
   <div class="projects">
-      <navbar></navbar>
       <b-row class="justify-content-center mt-3 m-2">
         <b-col sm="6">
           <b-card id="card-about" no-body class="overflow-hidden mb-2">
