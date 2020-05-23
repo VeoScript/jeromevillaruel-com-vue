@@ -64,7 +64,7 @@
 
         <b-col sm="8" >
            <b-card id="card-about" class="mb-3" 
-              v-for="(post, index) in freedom_wall " :key="index"
+              v-for="(post, index) in posts " :key="index"
             >
               <div class="fl">
                 <b-card-title>
@@ -76,7 +76,7 @@
                 <b-card-text max-width="100">
                     {{ post.posts }}
                 </b-card-text>
-                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon> 0</span>&nbsp;
+                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>{{ post.react.aggregate.count }}</span>&nbsp;
                 <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
               </div>
               <hr>
@@ -179,6 +179,9 @@ export default {
             }
           }
         }
+      },
+      result ({ data }) {
+        this.posts = data.freedom_wall
       }
     }
   }
