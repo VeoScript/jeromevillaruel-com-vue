@@ -19,3 +19,14 @@ subscription getAllPostFreedomWall {
   }
 }
 `
+
+
+export const COUNT_ALL_SUBSCRIBER_SUBSCRIPTION = gql`
+subscription getCountSubscriber {
+    subscriberCount: villaruel_subscriber_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }  
+`
