@@ -34,6 +34,11 @@ query getAllPostFreedomWall {
         name
       }
     }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
+      }
+    }
   }
 }
 `
@@ -52,6 +57,11 @@ query getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+      }
+    }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
       }
     }
   }

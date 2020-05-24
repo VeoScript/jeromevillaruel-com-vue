@@ -16,6 +16,11 @@ subscription getAllPostFreedomWall {
         name
       }
     }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
+      }
+    }
   }
 }
 `
@@ -55,6 +60,11 @@ subscription getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+      }
+    }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
       }
     }
   }
