@@ -51,6 +51,8 @@
 <script>
 
 import { GET_SINGLE_USER_POST } from '@/graphql/queries'
+import { GET_SINGLE_USER_POST_SUBSCRIPTION } from '@/graphql/subscriptions'
+
 
 export default {
     name: 'FreedomwallPost',
@@ -80,6 +82,23 @@ export default {
             variables() {
                 return {
                     post_id: this.$route.params.id
+                }
+            },
+            subscribeToMore: {
+                document: GET_SINGLE_USER_POST_SUBSCRIPTION,
+                variables() {
+                    return {
+                        post_id: this.$route.params.id
+                    }
+                },
+                updateQuery(previousResult, { subscriptionData }) {
+                    if (previousResult) {
+                        return {
+                            freedom_wall: [
+                                ...subscriptionData.data.freedom_wall
+                            ]
+                        }
+                    }
                 }
             },
             result ({ data }) {
