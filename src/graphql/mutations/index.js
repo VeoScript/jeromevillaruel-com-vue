@@ -36,3 +36,11 @@ mutation ReactHeart($name: String!, $post_id: uuid!) {
   }
 }
 `
+
+export const COMMENT_MUTATION = gql`
+mutation commentMutation ($post_id: uuid!, $name: String!, $comment: String!) {
+  insert_comments(objects: {post_id: $post_id, name: $name, comment: $comment}) {
+    affected_rows
+  }
+}
+`
