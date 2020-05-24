@@ -60,3 +60,14 @@ subscription getSingleUserPost ($post_id: uuid!){
   }
 }
 `
+
+export const GET_ALL_USER_COMMENT_BY_ID = gql`
+subscription getAllUserCommentByPostID ($post_id: uuid!) {
+  comments(where: {post_id: {_eq: $post_id}}) {
+    id
+    name
+    comment
+    created_at
+  }
+}
+`
