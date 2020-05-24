@@ -28,6 +28,12 @@ const routes = [
     component: () => import("@/views/Freedomwall.vue")
   },
   {
+    path: '/freedomwall/:id',
+    name: 'freedomwallpost',
+    meta: { transition: 'fade-in-up' },
+    component: () => import('@/views/FreedomwallPost.vue')
+  },
+  {
     path: "/projects",
     name: "Projects",
     component: () => import("@/views/Projects.vue")
