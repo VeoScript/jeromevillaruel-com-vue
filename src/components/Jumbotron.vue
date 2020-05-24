@@ -43,11 +43,12 @@
               </b-button>
             </b-input-group-append>
           </b-input-group>
-          <h3 class="text-center"><b id="n-subscribers" v-for="(c, i) in counter.slice(-1)" :key="i">
-            {{  c.id }}
-            </b>&nbsp;
-            <small>Subscribers</small>
-          </h3>
+          <Spinner class="mt-2" v-if="!villaruel_subscriber" />
+            <h3 v-else class="text-center"><b id="n-subscribers" v-for="(c, i) in villaruel_subscriber.slice(-1)" :key="i">
+              {{  c.id }}
+              </b>&nbsp;
+              <small>Subscribers</small>
+            </h3>
         </b-col>
       </b-row>
     </b-jumbotron>
@@ -65,6 +66,10 @@ import { GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION, COUNT_ALL_SUBSCRIBER_SUBSCRIPTIO
 
 export default {
       name: 'Jumbotron',
+
+      components: {
+        Spinner: () => import('./Spinner')
+      },
 
       data () {
         return {

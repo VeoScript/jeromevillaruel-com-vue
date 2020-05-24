@@ -34,6 +34,47 @@ query getAllPostFreedomWall {
         name
       }
     }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }
+}
+`
+
+export const GET_SINGLE_USER_POST = gql`
+query getSingleUserPost ($post_id: uuid!){
+  freedom_wall(order_by: {created_at: desc}, where: {id: {_eq: $post_id}}) {
+    id
+    name
+    posts
+    created_at
+    react: react_users_aggregate {
+      aggregate {
+        count
+      }
+      nodes {
+        id
+        name
+      }
+    }
+    commentCount: comments_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }
+}
+`
+
+export const GET_ALL_USER_COMMENT_BY_ID = gql`
+query getAllUserCommentByPostID ($post_id: uuid!) {
+  comments(where: {post_id: {_eq: $post_id}}) {
+    id
+    name
+    comment
+    created_at
   }
 }
 `

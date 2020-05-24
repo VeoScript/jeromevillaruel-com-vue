@@ -13,6 +13,7 @@ const routes = [
   {
     path: "/about",
     name: "About",
+    meta: { transition: 'fade-in-up' },
     component: () => import("@/views/About.vue")
   },
   {
@@ -23,7 +24,14 @@ const routes = [
   {
     path: "/freedomwall",
     name: "FreedomWall",
+    meta: { transition: 'fade-in-up' },
     component: () => import("@/views/Freedomwall.vue")
+  },
+  {
+    path: '/freedomwall/:id',
+    name: 'freedomwallpost',
+    meta: { transition: 'fade-in-up' },
+    component: () => import('@/views/FreedomwallPost.vue')
   },
   {
     path: "/projects",

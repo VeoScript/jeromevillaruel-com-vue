@@ -67,7 +67,7 @@
             >
               <div class="fl">
                 <b-card-title>
-                  {{ capitalize(post.name) }}
+                  <b-icon icon="chat-quote"></b-icon> {{ capitalize(post.name) }}
                   <br><span id="lbldate">
                     Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                   </span>
@@ -76,7 +76,7 @@
                     {{ post.posts }}
                 </b-card-text>
                 <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp;{{ post.react.aggregate.count }}</span>&nbsp;
-                <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
+                <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> {{ post.commentCount.aggregate.count }}</span>
               </div>
               <hr>
               <div class="fr">
