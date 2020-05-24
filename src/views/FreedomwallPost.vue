@@ -22,7 +22,7 @@
                             v-for="(post, index) in postData" :key="index"
                         >
                             <b-card-title>
-                            {{ capitalize(post.name) }}
+                            <b-icon icon="chat-quote"></b-icon> {{ capitalize(post.name) }}
                             <br><span id="lbldate">
                                 Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                             </span>
@@ -33,13 +33,26 @@
                             <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp; {{ post.react.aggregate.count }}</span>&nbsp;
                             <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
                         </div>
-                        <hr>
+                        <hr />
                         <div class="fr">
 
                             <button-actions 
                                 :post_id="postId"
                             />
 
+                        </div>
+                        <hr />
+                         <div class="ma-3">
+                            <b-card-title style="font-size: 17px;">
+                                <b-icon icon="chat-dots"></b-icon> Joshua Galit
+                                <span id="lbldate" class="ml-2" style="font-size: 13px;">
+                                    commented on 12312 <b-icon icon="alarm"></b-icon> <!-- timeago :datetime="post.created_at" :auto-update="60"></timeago -->
+                                </span>
+                            </b-card-title>
+                            <b-card-text max-width="100" class="ml-3">
+                                my comment
+                            </b-card-text>
+                            <hr>
                         </div>
                     </b-card>
                 </b-col>
