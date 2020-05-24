@@ -67,7 +67,7 @@
             >
               <div class="fl">
                 <b-card-title>
-                  {{ capitalize(post.name) }}
+                  <b-icon icon="chat-quote"></b-icon> {{ capitalize(post.name) }}
                   <br><span id="lbldate">
                     Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                   </span>
