@@ -37,7 +37,7 @@
                         <div class="fr">
 
                             <button-actions 
-                                :post_id="$route.params.id"
+                                :post_id="postId"
                             />
 
                         </div>
@@ -59,7 +59,8 @@ export default {
 
     data () {
         return {
-            postData: []
+            postData: [],
+            postId: this.$route.params.id
         }
     },
 
