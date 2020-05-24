@@ -76,7 +76,7 @@
                     {{ post.posts }}
                 </b-card-text>
                 <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp;{{ post.react.aggregate.count }}</span>&nbsp;
-                <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
+                <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> {{ post.commentCount.aggregate.count }}</span>
               </div>
               <hr>
               <div class="fr">
