@@ -71,22 +71,7 @@
         </b-card>
       </b-col>
       <b-col cols="sm-4" class="mt-3">
-        <b-card id="card-about" no-body class="overflow-hidden mb-2" style="max-width: 540px;">
-          <b-row no-gutters>
-            <b-col sm="6">
-              <b-card-img src="https://pbs.twimg.com/media/EYCOxmtUwAA__Hz?format=jpg&name=medium" alt="Image" class="rounded-0"></b-card-img>
-            </b-col>
-            <b-col sm="6">
-              <b-card-body title="Villaruel Jerome">
-                <b-card-text>
-                  @veoscript/contact<br>
-                  -09753286466<br>
-                  -09380044523<br>
-                </b-card-text>
-              </b-card-body>
-            </b-col>
-          </b-row>
-        </b-card>
+        <my-info-card /> <!-- My Information Card -->
         <b-card id="card-about" class="overflow-hidden" style="max-width: 540px;">
           <b-row>
             <b-col sm="12">
@@ -114,12 +99,12 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
 
 export default {
   name: "About",
   components: {
-    navbar: Navbar
+    Navbar: () => import('@/components/Navbar.vue'),
+    MyInfoCard: () => import('@/components/MyInfoCard.vue')
   }
 }
 </script>
