@@ -1,72 +1,134 @@
 <template>
-    <div>
-        <div v-if="$apollo.loading" class="mt-3">
-            <spinner />
-        </div>
-        <b-container class="mt-4" v-else>
+    <div class="freedomwall">
+        <b-container class="mt-5">
             <b-row class="justify-content-center">
                 <b-col cols="sm-4">
-                    <b-card id="card-about" no-body class="overflow-hidden mb-2" style="max-width: 540px;">
-                        <b-row no-gutters>
-                            <b-col sm="6">
-                            <b-card-img src="https://pbs.twimg.com/media/EYCOxmtUwAA__Hz?format=jpg&name=medium" alt="Image" class="rounded-0"></b-card-img>
-                            </b-col>
-                            <b-col sm="6">
-                            <b-card-body title="Villaruel Jerome">
-                                <b-card-text>
-                                @veoscript/contact<br>
-                                -09753286466<br>
-                                -09380044523<br>
-                                </b-card-text>
-                            </b-card-body>
-                            </b-col>
-                        </b-row>
-                    </b-card>
+                    <my-info-card /> <!-- My Information Card -->
                 </b-col>
                 <b-col cols="sm-8">
+                    <b-breadcrumb id="card-about">
+                        <b-breadcrumb-item router to="/freedomwall">
+                            Freedom Wall
+                        </b-breadcrumb-item>
+                        <b-breadcrumb-item active>Joshua Galit</b-breadcrumb-item>
+                    </b-breadcrumb>
                     <b-card id="card-about" class="mb-3" 
                         
                     >
-                    <!-- v-for="(post, index) in posts " :key="index" -->
-                        <div class="fl">
+                     <div v-if="$apollo.loading" class="mt-3">
+                        <spinner />
+                    </div>
+                        <div class="fl" v-else
+                            v-for="(post, index) in postData" :key="index"
+                        >
                             <b-card-title>
-                            <!-- {{ capitalize(post.name) }} -->
-                            Joshua Galit
+                            {{ capitalize(post.name) }}
                             <br><span id="lbldate">
-                                <!-- {{ post.created_at.split('T')[0] }} -->
-                                Posted on 123 <b-icon icon="alarm"></b-icon> <!--timeago :datetime="post.created_at" :auto-update="60"></timeago -->
+                                Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                             </span>
                             </b-card-title>
                             <b-card-text max-width="100">
-                                <!-- {{ post.posts }} -->
-                                Post
+                                {{ post.posts }}
                             </b-card-text>
-                            <!-- {{ post.react.aggregate.count }} -->
-                            <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp;0</span>&nbsp;
+                            <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp; {{ post.react.aggregate.count }}</span>&nbsp;
                             <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> 0</span>
                         </div>
                         <hr>
                         <div class="fr">
 
-                            <!-- <button-actions 
-                            :post_id="post.id"
-                            /> -->
+                            <button-actions 
+                                :post_id="$route.params.id"
+                            />
 
                         </div>
                     </b-card>
                 </b-col>
-        <b-container>
+            </b-row>
+        </b-container>
     </div>
 </template>
 
 <script>
+
+import { GET_SINGLE_USER_POST } from '@/graphql/queries'
+
 export default {
     name: 'FreedomwallPost',
 
-    components: {
-        Spinner: () => import('@/components/Spinner')
+    data () {
+        return {
+            postData: []
+        }
     },
 
+    methods: {
+        capitalize(s) {
+            if (typeof s !== 'string') return ''
+            return s.charAt(0).toUpperCase() + s.slice(1)
+        }
+    },
 
+    components: {
+        Spinner: () => import('@/components/Spinner'),
+        ButtonActions: () => import('@/components/ButtonActions'),
+        MyInfoCard: () => import('@/components/MyInfoCard')
+    },
+
+    apollo: {
+        freedom_wall: {
+            query: GET_SINGLE_USER_POST,
+            variables() {
+                return {
+                    post_id: this.$route.params.id
+                }
+            },
+            result ({ data }) {
+                this.postData = data.freedom_wall
+            }
+        }
+    }
 }
 </script>
+
+<style scroped>
+  .freedomwall{
+    margin-top: 100px;
+  }
+
+  #card-about{
+    background: #20284D;
+    color: #A8B3DB;
+  }
+
+
+  .text-muted{
+    color: #fff!important;
+  }
+
+  #copyright{
+    font-size: 12px;
+    color: #A8B3DB;
+  }
+
+  #txtname, #txtpost{
+    background: #495DAC;
+    border: 0;
+    color: #ffffff;
+  }
+
+  #lbldate{
+    font-size: 12px;
+    font-weight: lighter;
+    color: #778ce2;
+  }
+
+  #btnpost{
+    background: #495DAC;
+    border: none;
+  }
+
+  #heart{
+    background: #f66f6c;
+    border-color: #f66f6c;
+  }
+</style>
