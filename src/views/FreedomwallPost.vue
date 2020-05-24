@@ -42,18 +42,9 @@
 
                         </div>
                         <hr />
-                         <div class="ma-3">
-                            <b-card-title style="font-size: 17px;">
-                                <b-icon icon="chat-dots"></b-icon> Joshua Galit
-                                <span id="lbldate" class="ml-2" style="font-size: 13px;">
-                                    commented on 12312 <b-icon icon="alarm"></b-icon> <!-- timeago :datetime="post.created_at" :auto-update="60"></timeago -->
-                                </span>
-                            </b-card-title>
-                            <b-card-text max-width="100" class="ml-3">
-                                my comment
-                            </b-card-text>
-                            <hr>
-                        </div>
+                        <!-- Fetching all comments -->
+                         <comment-post />
+                        <!-- End fetching -->
                     </b-card>
                 </b-col>
             </b-row>
@@ -65,7 +56,6 @@
 
 import { GET_SINGLE_USER_POST } from '@/graphql/queries'
 import { GET_SINGLE_USER_POST_SUBSCRIPTION } from '@/graphql/subscriptions'
-
 
 export default {
     name: 'FreedomwallPost',
@@ -87,7 +77,8 @@ export default {
     components: {
         Spinner: () => import('@/components/Spinner'),
         ButtonActions: () => import('@/components/ButtonActions'),
-        MyInfoCard: () => import('@/components/MyInfoCard')
+        MyInfoCard: () => import('@/components/MyInfoCard'),
+        CommentPost: () => import('./CommentPost')
     },
 
     apollo: {
