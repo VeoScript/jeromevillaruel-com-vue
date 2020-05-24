@@ -39,3 +39,24 @@ subscription getAllSubscriber {
     }
   }
 `
+
+
+export const GET_SINGLE_USER_POST_SUBSCRIPTION = gql`
+subscription getSingleUserPost ($post_id: uuid!){
+  freedom_wall(order_by: {created_at: desc}, where: {id: {_eq: $post_id}}) {
+    id
+    name
+    posts
+    created_at
+    react: react_users_aggregate {
+      aggregate {
+        count
+      }
+      nodes {
+        id
+        name
+      }
+    }
+  }
+}
+`
