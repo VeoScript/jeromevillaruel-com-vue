@@ -41,7 +41,7 @@
                         <span v-if="!$v.commentName.maxLength">Name must have at most {{ $v.commentName.$params.maxLength.max }} letters.</span>
                     </div>
                 </b-form-group>
-                <b-form-group label="Post anything here..." label-for="txtpost">
+                <b-form-group label="Comment here..." label-for="txtpost">
                     <b-textarea 
                         v-model.trim="$v.commentUser.$model"
                         :class="{ 'is-invalid' : $v.commentUser.$error, 'is-valid' : !$v.commentUser.$invalid }"
@@ -79,6 +79,7 @@
 
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 
+import { COMMENT_MUTATION } from '@/graphql/mutations'
 
 export default {
     name: 'ButtonCommentAction',
@@ -109,12 +110,22 @@ export default {
         commentSubmit() {
             this.$v.$touch()
             if (!this.$v.$invalid) {
-                alert(this.commentName + " " + this.commentUser)
-                this.commentName = ''
-                this.commentUser = ''
-                this.loading = false
-                this.commentModal = false
-                this.$v.$reset()
+                this.loading= true
+                const { commentName, commentUser } = this.$data
+                this.$apollo.mutate({
+                    mutation: COMMENT_MUTATION,
+                    variables: {
+                        post_id: this.post_id,
+                        name: commentName,
+                        comment: commentUser
+                    }
+                }).then(() => {
+                    this.loading = false
+                    this.commentName = ''
+                    this.commentUser = ''
+                    this.commentModal = false
+                    this.$v.$reset()
+                })
             }
         }
     }
