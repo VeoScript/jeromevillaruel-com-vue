@@ -10,15 +10,15 @@
                         <b-breadcrumb-item router to="/freedomwall">
                             Freedom Wall
                         </b-breadcrumb-item>
-                        <b-breadcrumb-item active>Joshua Galit</b-breadcrumb-item>
+                        <b-breadcrumb-item active v-for="(n, i) in postData" :key="i">{{ n.name }}</b-breadcrumb-item>
                     </b-breadcrumb>
-                    <b-card id="card-about" class="mb-3" 
-                        
-                    >
-                     <div v-if="$apollo.loading" class="mt-3">
+                    <div v-if="$apollo.loading" class="mt-3">
                         <spinner />
                     </div>
-                        <div class="fl" v-else
+                    <b-card id="card-about" class="mb-3" 
+                        v-else
+                    >
+                        <div class="fl"
                             v-for="(post, index) in postData" :key="index"
                         >
                             <b-card-title>
