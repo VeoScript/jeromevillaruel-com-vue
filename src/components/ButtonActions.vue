@@ -53,8 +53,14 @@
             </form>
         </b-modal>
 
-        <b-button class="btn btn-info" id="comment" v-b-tooltip.hover title="Comment">
-        <b-icon icon="chat-square-dots-fill"></b-icon>
+        <b-button 
+            class="btn btn-info" 
+            id="comment" 
+            v-b-tooltip.hover 
+            title="Comment"
+            router :to="`/freedomwall/${post_id}`"
+        >
+            <b-icon icon="chat-square-dots-fill"></b-icon>
         </b-button>
 
         <b-button class="btn btn-secondary" id="report" v-b-tooltip.hover title="Report">
