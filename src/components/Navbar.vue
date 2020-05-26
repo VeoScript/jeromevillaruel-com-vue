@@ -38,7 +38,7 @@ export default {
   }
 
   .subtitle{
-    font-family: 'Corbel';
+    font-family: 'Sen';
     font-size: 12px;
     color: #dbdbdb;
     cursor: pointer;
