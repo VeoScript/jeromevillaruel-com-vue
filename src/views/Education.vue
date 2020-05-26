@@ -81,35 +81,35 @@ export default {
   }
 
   #e-text{
-    font-family: 'Calibri';
+    font-family: 'Varela Round';
     font-size: 30px;
     font-weight: bolder;
     color: #fff;
   }
 
   #e-address{
-    font-family: 'Calibri';
+    font-family: 'Varela Round';
     font-size: 14px;
     font-weight: lighter;
     color: #fff;
   }
 
   #e-course{
-    font-family: 'Calibri';
+    font-family: 'Varela Round';
     font-size: 20px;
     font-weight: bolder;
     color: #fff;
   }
 
   #e-major{
-    font-family: 'Calibri';
+    font-family: 'Varela Round';
     font-size: 14px;
     font-weight: lighter;
     color: #72AECB;
   }
 
   #e-year{
-    font-family: 'Calibri';
+    font-family: 'Varela Round';
     font-size: 18px;
     font-weight: bolder;
     color: #ECAB44;
