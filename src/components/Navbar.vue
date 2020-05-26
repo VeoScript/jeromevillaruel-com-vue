@@ -39,7 +39,7 @@ export default {
 
   .subtitle{
     font-family: 'Sen';
-    font-size: 12px;
+    font-size: 10px;
     color: #dbdbdb;
     cursor: pointer;
   }
