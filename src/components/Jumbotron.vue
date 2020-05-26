@@ -100,7 +100,7 @@ export default {
                }).then(() => {
                   this.loading = false
                   this.$v.$reset()
-                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Offical`)
+                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Official Website. Thank you.`)
                   this.email = ''
                }).catch(error => console.log(error))
             }
