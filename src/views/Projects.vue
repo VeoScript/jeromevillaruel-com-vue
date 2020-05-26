@@ -77,7 +77,7 @@
         </b-card>
         <b-card no-body id="card-about">
           <b-card-img img-top :src="require('../assets/photos/projects/gorehab.png')" alt="Image" class="rounded-0"></b-card-img>
-          <b-card-body title="Teacher Evaluation System">
+          <b-card-body title="GoRehab Website">
             <b-card-text>
               Rehabilitation Center Management System. <br>
               -Written in PHP.
