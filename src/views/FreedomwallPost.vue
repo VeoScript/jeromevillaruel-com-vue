@@ -130,7 +130,7 @@ export default {
   }
 
   #copyright{
-    font-size: 12px;
+    font-size: 10px;
     color: #A8B3DB;
   }
 

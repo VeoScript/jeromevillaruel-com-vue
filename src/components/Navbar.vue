@@ -25,14 +25,15 @@ export default {
 </script>
 
 <style>
+
   #navigationbar{
     background: #495dac;
     padding: 20px;
   }
   
   #navigationbar .navbar-brand{
-    font-family: Mr Grieves;
-    font-weight: bolder;
+    font-family: 'Monoton';
+    font-weight: lighter;
     color: #fff;
   }
 

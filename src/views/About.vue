@@ -92,7 +92,7 @@
             </b-col>
           </b-row>
         </b-card>
-        <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+        <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
       </b-col>
     </b-row>
   </div>
@@ -120,6 +120,7 @@ export default {
   }
 
   #card-text{
+    font-size: 11px;
     font-weight: bolder;
     color: #fff;
   }
@@ -128,15 +129,17 @@ export default {
     background: #495DAC !important;
     border: 0 !important;
     color: #FAC6AD !important;
+    font-size: 12px;
   }
 
   #copyright{
-    font-size: 12px;
+    font-size: 10px;
     color: #A8B3DB;
+    margin-top: 5px;
   }
 
   #workaddress{
-    font-size: 12px;
+    font-size: 9px;
     color: #fff;
   }
 </style>

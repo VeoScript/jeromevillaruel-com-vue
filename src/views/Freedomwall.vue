@@ -58,7 +58,7 @@
               Loading...
             </b-button>
           </b-card>
-          <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+          <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
         </b-col>
 
         <b-col sm="8" >
@@ -203,7 +203,7 @@ export default {
   }
 
   #copyright{
-    font-size: 12px;
+    font-size: 10px;
     color: #A8B3DB;
   }
 

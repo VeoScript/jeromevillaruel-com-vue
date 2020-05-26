@@ -52,7 +52,7 @@
         </b-col>
       </b-row>
     </b-jumbotron>
-    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
   </div>
 </template>
 
@@ -167,7 +167,7 @@ export default {
   }
 
   #copyright-home{
-    font-size: 12px;
+    font-size: 10px;
     color: #A8B3DB;
     text-align: center;
   }

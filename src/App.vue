@@ -10,14 +10,20 @@
 <script>
 export default {
    components: {
-      Navbar: () => import('@/components/Navbar.vue'),
+      Navbar: () => import('@/components/Navbar.vue')
    }
 }
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+
 #app {
-  font-family: Calibri;
+  font-family: 'Varela Round';
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

@@ -38,18 +38,14 @@
           </b-row>
         </b-tab>
       </b-tabs>
-    <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Powered by Vue JS.</p>
+    <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
   </div>
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
 
 export default {
-  name: "Education",
-  components: {
-    navbar: Navbar
-  }
+  name: "Education"
 }
 </script>
 
@@ -124,7 +120,7 @@ export default {
   }
 
   #copyright-home{
-    font-size: 12px;
+    font-size: 10px;
     color: #A8B3DB;
     text-align: center;
   }
