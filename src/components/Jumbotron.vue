@@ -4,7 +4,7 @@
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
           <b-img rounded="rounded" width="200" alt="placeholder" :src="require('../assets/photos/veoofficial_2.png')"></b-img>
-          <h1 class="mt-0 mb-1" id="j-1">Villaruel Jerome</h1>
+          <h1 class="mt-0 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
           </h4>
@@ -143,8 +143,8 @@ export default {
   }
 
   #j-1{
-    font-family: 'Arial Black';
-    font-size: 30px;
+    font-family: 'Varela Round';
+    font-size: 35px;
     font-weight: bolder;
     color: #8cd3fa;
   }
