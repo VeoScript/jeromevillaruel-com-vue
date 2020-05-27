@@ -49,6 +49,7 @@
                         <!-- Fetching all comments -->
                          <comment-post />
                         <!-- End fetching -->
+                        <BackToTop/>
                     </b-card>
                 </b-col>
             </b-row>
@@ -83,7 +84,8 @@ export default {
         ButtonActions: () => import('@/components/ButtonActions'),
         MyInfoCard: () => import('@/components/MyInfoCard'),
         CommentPost: () => import('./CommentPost'),
-        HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
+        HeartCommentCountModal: () => import('@/components/HeartCommentCountModal'),
+        BackToTop: () => import('@/components/BackToTop')
     },
 
     apollo: {
