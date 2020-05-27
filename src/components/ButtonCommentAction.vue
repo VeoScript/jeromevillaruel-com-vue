@@ -44,7 +44,7 @@
                 <b-form-group label="Comment here..." label-for="txtpost">
                     <b-textarea 
                         v-model.trim="$v.commentUser.$model"
-                        :class="{ 'is-invalid' : $v.commentUser.$error, 'is-valid' : !$v.commentUser.$invalid }"
+                        :class="{ 'is-invalid' : $v.commentUser.$error, 'is-valid' : !$v.commentUser.$invalid }" id="txt-input-comment"
                     ></b-textarea>
                     <div class="invalid-feedback feedback">
                         <span v-if="!$v.commentUser.required">You comment is required</span>
@@ -132,3 +132,11 @@ export default {
 
 }
 </script>
+
+<style>
+  #name-input, #txt-input-comment{
+    background: #495DAC;
+    border: 0;
+    color: #ffffff;
+  }
+</style>
