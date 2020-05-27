@@ -8,10 +8,8 @@
       @click="backToTop">
       <slot>
         <div class="default">
-          <span>
-            <!-- <b-icon icon="chevron-double-up"></b-icon> -->
-            Back to top 
-          </span>
+          <b-icon icon="arrow90deg-up" class="top-arrow"></b-icon>
+          <!-- <i class="fa fa-arrow-to-top"></i> -->
         </div>
       </slot>
     </div>
@@ -94,8 +92,14 @@ export default {
     background: #12182f;
     font-family: 'Varela Round';
     font-size: 12px;
-    color: #768ada;
-    width: 90px;
-    border-radius: 30px;
+    color: #ffffff;
+    width: 50px;
+    border-radius: 6px;
   }
+
+  .top-arrow {
+    font-size: 23px;
+    margin-top: 3px;
+  }
+
 </style>
