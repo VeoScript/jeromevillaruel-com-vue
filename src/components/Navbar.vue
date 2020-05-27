@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-top top">
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
-      <b-navbar-brand href="/">VEOSCRIPT<span class="subtitle">.official</span></b-navbar-brand>
+      <b-navbar-brand route to="/">VEOSCRIPT<span class="subtitle">.official</span></b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
