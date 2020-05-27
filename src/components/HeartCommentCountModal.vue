@@ -10,7 +10,7 @@
             <b-modal 
                 v-model="postHeartCount" 
                 hide-footer
-                title="Person Who React Heart <3"
+                title="People who react in this post"
             >
                 <div v-if="$apollo.loading" class="mt-3">
                     <spinner />
