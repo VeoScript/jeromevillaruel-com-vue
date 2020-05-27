@@ -87,7 +87,8 @@
         </b-card>
       </b-card-group>
       <p id="copyright-home" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
-  </div>
+      <BackToTop/>
+ </div>
 </template>
 
 <script>
@@ -96,7 +97,8 @@ import Navbar from '@/components/Navbar.vue';
 export default {
     name: 'Projects',
     components: {
-        navbar: Navbar
+      navbar: Navbar,
+      BackToTop: () => import('@/components/BackToTop')
     }
 }
 </script>

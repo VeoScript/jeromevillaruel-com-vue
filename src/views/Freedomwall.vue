@@ -49,7 +49,7 @@
               </div>
             </b-card>
         </b-col>
-
+        <BackToTop/>
       </b-row>
     </b-container>
   </div>
@@ -78,7 +78,8 @@ export default {
     Spinner: () => import('@/components/Spinner'),
     ButtonActions: () => import('@/components/ButtonActions'),
     TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
-    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
+    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal'),
+    BackToTop: () => import('@/components/BackToTop')
   },
 
   methods: {

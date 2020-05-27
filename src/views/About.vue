@@ -95,6 +95,7 @@
         <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
       </b-col>
     </b-row>
+    <BackToTop/>
   </div>
 </template>
 
@@ -104,7 +105,8 @@ export default {
   name: "About",
   components: {
     Navbar: () => import('@/components/Navbar.vue'),
-    MyInfoCard: () => import('@/components/MyInfoCard.vue')
+    MyInfoCard: () => import('@/components/MyInfoCard.vue'),
+    BackToTop: () => import('@/components/BackToTop')
   }
 }
 </script>
