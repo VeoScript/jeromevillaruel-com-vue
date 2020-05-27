@@ -26,9 +26,11 @@
                             id="card-about"
                             v-for="(pw, iw) in post.react.nodes" 
                             :key="`AS-${iw}`"
+                            class="d-flex justify-content-between align-items-center"
                         >
                             <b-icon  icon="heart-fill" ></b-icon> 
                             {{ capitalize(pw.name) }} 
+                            <b-badge variant="primary" pill><timeago :datetime="pw.created_at" :auto-update="60"></timeago></b-badge>
                         </b-list-group-item>
                     </b-list-group>
                 </div>
