@@ -121,7 +121,7 @@ export default {
                     }
                 }).then(() => {
                     this.loading = false
-                    this.commentName = ''
+                    // this.commentName = ''
                     this.commentUser = ''
                     this.commentModal = false
                     this.$v.$reset()
