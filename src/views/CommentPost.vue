@@ -1,6 +1,9 @@
 <template>
     <div>
-        <div v-for="(com, ind) in commentData" :key="ind">
+        <div class="text-center" v-if="$apollo.loading">
+            <spinner />
+        </div>
+        <div v-else v-for="(com, ind) in commentData" :key="ind">
             <b-card-title style="font-size: 17px;">
                 <b-icon icon="chat-dots"></b-icon> {{ capitalize(com.name) }}
                 <span id="lbldate" class="ml-2" style="font-size: 13px;">
@@ -22,6 +25,10 @@ import { GET_ALL_USER_COMMENT_BY_ID_SUBSCRIPTION } from '@/graphql/subscriptions
 
 export default {
     name: 'CommentPost',
+
+    components: {
+        Spinner: () => import('@/components/Spinner')
+    },
 
     data () {
         return {
