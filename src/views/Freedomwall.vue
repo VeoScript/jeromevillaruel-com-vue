@@ -1,20 +1,19 @@
 <template>
   <div class="freedomwall">
-    <div v-if="$apollo.loading" class="mt-3">
-       <spinner />
-    </div>
-    <b-container class="mt-4" v-else>
+    <b-container class="mt-4">
       <b-row class="justify-content-center">
         <b-col sm="4" class="mb-2">
           <b-card title="Freedom Wall" id="card-about">
             <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
             <hr>
-
-            <b-form-group  label="Name" label-for="txtname">
+            <b-form-group  label="Name">
+              
               <b-form-input 
+                type="text" 
                 id="txtname" 
                 v-model.trim="$v.name.$model"
                 :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
+                autocomplete="off"
               ></b-form-input>
               <div class="invalid-feedback feedback">
                   <span v-if="!$v.name.required">Name is required</span>
@@ -62,7 +61,10 @@
         </b-col>
 
         <b-col sm="8" >
-           <b-card id="card-about" class="mb-3" 
+          <div v-if="$apollo.loading" class="mt-3">
+            <spinner />
+          </div>
+           <b-card v-else id="card-about" class="mb-3" 
               v-for="(post, index) in posts " :key="index"
             >
               <div class="fl">
