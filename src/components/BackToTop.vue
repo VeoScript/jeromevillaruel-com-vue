@@ -9,7 +9,7 @@
       <slot>
         <div class="default">
           <span>
-            <!-- <b-icon icon="chevron-double-up"></b-icon> -->
+            <b-icon icon="chevron-double-up"></b-icon>
             Back to top 
           </span>
         </div>
@@ -37,7 +37,7 @@ export default {
     },
     right: {
       type: String,
-      default: '20px',
+      default: '14px',
     },
     bottom: {
       type: String,
@@ -95,7 +95,11 @@ export default {
     font-family: 'Varela Round';
     font-size: 12px;
     color: #768ada;
-    width: 90px;
+    width: 100px;
     border-radius: 30px;
+  }
+
+  .vue-back-to-top .default span{
+    cursor: pointer;
   }
 </style>
