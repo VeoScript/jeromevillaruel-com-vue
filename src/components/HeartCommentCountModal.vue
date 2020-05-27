@@ -17,13 +17,20 @@
                 </div>
                 <div 
                     v-else
-                    v-for="(post, index) in postData" :key="`I-${index}`"
                 >
-                    <ul>
-                        <li v-for="(pw, iw) in post.react.nodes" :key="`AS-${iw}`">
-                            {{ pw.name }}
-                        </li>
-                    </ul>
+                    <b-list-group 
+                        v-for="(post, index) in postData" 
+                        :key="`I-${index}`"
+                    >
+                        <b-list-group-item
+                            id="card-about"
+                            v-for="(pw, iw) in post.react.nodes" 
+                            :key="`AS-${iw}`"
+                        >
+                            <b-icon  icon="heart-fill" ></b-icon> 
+                            {{ pw.name }} 
+                        </b-list-group-item>
+                    </b-list-group>
                 </div>
             </b-modal>
         </span>
