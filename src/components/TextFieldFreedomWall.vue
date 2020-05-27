@@ -96,7 +96,7 @@ export default {
                 }
             }).then(() => {
                 this.loading = false
-                this.name = ''
+                // this.name = ''
                 this.freedomWords = ''
                 this.$v.$reset()
             }).catch(error => console.log(error))
