@@ -167,4 +167,13 @@ export default {
     color: white;
     cursor: pointer;
   }
+
+  .breadcrumb .breadcrumb-item a{
+      color: #fff;
+  }
+
+  .breadcrumb .breadcrumb-item a:hover{
+      color: #778ce2;
+      text-decoration: none;
+  }
 </style>
