@@ -160,4 +160,9 @@ export default {
     background: #f66f6c;
     border-color: #f66f6c;
   }
+
+  .countreact:hover {
+    color: white;
+    cursor: pointer;
+  }
 </style>
