@@ -10,7 +10,7 @@
             <!-- Text Field Free Wall -->
              <text-field-freedom-wall />
             <!-- End TextField Form -->
-            
+
           </b-card>
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
         </b-col>
@@ -32,8 +32,12 @@
                 <b-card-text max-width="100">
                     {{ post.posts }}
                 </b-card-text>
-                <br><span class="countreact"><b-icon icon="heart-fill"></b-icon>&nbsp;{{ post.react.aggregate.count }}</span>&nbsp;
-                <span class="countreact mx-2"><b-icon icon="chat-square-dots-fill"></b-icon> {{ post.commentCount.aggregate.count }}</span>
+                <br>
+
+                <heart-comment-count-modal 
+                  :post_id="post.id"
+                />
+
               </div>
               <hr>
               <div class="fr">
@@ -63,7 +67,8 @@ export default {
     return {
       posts: [],
       loading: false,
-      heartModal: false
+      heartModal: false,
+      postHeartCount: false
     }
   },
 
@@ -72,7 +77,8 @@ export default {
     navbar: () => import('@/components/Navbar.vue'),
     Spinner: () => import('@/components/Spinner'),
     ButtonActions: () => import('@/components/ButtonActions'),
-    TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall')
+    TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
+    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
   },
 
   methods: {
@@ -145,5 +151,10 @@ export default {
   #heart{
     background: #f66f6c;
     border-color: #f66f6c;
+  }
+
+  .countreact:hover {
+    color: white;
+    cursor: pointer;
   }
 </style>
