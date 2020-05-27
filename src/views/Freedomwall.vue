@@ -6,56 +6,11 @@
           <b-card title="Freedom Wall" id="card-about">
             <b-card-sub-title class="mb-2">What's on your mind?</b-card-sub-title>
             <hr>
-            <b-form-group  label="Name">
-              
-              <b-form-input 
-                type="text" 
-                id="txtname" 
-                v-model.trim="$v.name.$model"
-                :class="{ 'is-invalid' : $v.name.$error, 'is-valid' : !$v.name.$invalid }"
-                autocomplete="off"
-              ></b-form-input>
-              <div class="invalid-feedback feedback">
-                  <span v-if="!$v.name.required">Name is required</span>
-                  <span v-if="!$v.name.minLength">Name must have at least {{ $v.name.$params.minLength.min }} letters. </span>
-                  <span v-if="!$v.name.maxLength">Name must have at most {{ $v.name.$params.maxLength.max }} letters.</span>
-              </div>
-
-            </b-form-group> <!-- full name button -->
-
-            <b-form-group label="Post anything here..." label-for="txtpost">
-              <b-textarea 
-                id="txtpost" 
-                v-model.trim="$v.freedomWords.$model"
-                :class="{ 'is-invalid' : $v.freedomWords.$error, 'is-valid' : !$v.freedomWords.$invalid }"
-              ></b-textarea>
-              <div class="invalid-feedback feedback">
-                  <span v-if="!$v.freedomWords.required">You posts is required</span>
-                  <span v-if="!$v.freedomWords.minLength">You posts must have at least {{ $v.freedomWords.$params.minLength.min }} letters. </span>
-                  <span v-if="!$v.freedomWords.maxLength">You posts must have at most {{ $v.freedomWords.$params.maxLength.max }} letters.</span>
-              </div>
-
-            </b-form-group> <!-- post text area button -->
-
-            <b-button 
-              variant="primary" 
-              class="float-right mt-2" 
-              id="btnpost" 
-              @click="freedomPost"
-              v-if="!loading"
-            >
-              Post
-            </b-button > <!-- posts button -->
-            <b-button 
-              v-else 
-              variant="primary" 
-              id="btnpost" 
-              disabled 
-              class="float-right mt-2" 
-            >
-              <b-spinner small type="grow"></b-spinner>
-              Loading...
-            </b-button>
+            
+            <!-- Text Field Free Wall -->
+             <text-field-freedom-wall />
+            <!-- End TextField Form -->
+            
           </b-card>
           <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
         </b-col>
@@ -98,12 +53,8 @@
 
 <script>
 
-import { required, minLength, maxLength } from 'vuelidate/lib/validators'
-
-import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 import { GET_ALL_POSTS_FREEDOM_WALL } from '@/graphql/queries'
 import { GET_ALL_POSTS_FREEDOM_WALL_SUBSCRIPTION } from '@/graphql/subscriptions'
-
 
 export default {
   name: "FreedomWall",
@@ -111,58 +62,23 @@ export default {
   data () {
     return {
       posts: [],
-      name: '',
-      freedomWords: '',
       loading: false,
       heartModal: false
     }
   },
 
-  validations: {
-    name: {
-        required,
-        minLength: minLength(5),
-        maxLength: maxLength(25)
-    },
-    freedomWords: {
-      required,
-      minLength: minLength(20),
-      maxLength: maxLength(200)
-    }
-  },
 
   components: {
     navbar: () => import('@/components/Navbar.vue'),
     Spinner: () => import('@/components/Spinner'),
-    ButtonActions: () => import('@/components/ButtonActions')
+    ButtonActions: () => import('@/components/ButtonActions'),
+    TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall')
   },
 
   methods: {
     capitalize(s) {
         if (typeof s !== 'string') return ''
         return s.charAt(0).toUpperCase() + s.slice(1)
-    },
-    freedomPost() {
-        this.$v.$touch()
-        if (!this.$v.$invalid) {
-
-           this.loading = true
-
-           const { name, freedomWords } = this.$data
-
-           this.$apollo.mutate({
-             mutation: POST_FREEDOM_WALL,
-             variables: {
-                 name: name, 
-                 posts: freedomWords
-             }
-           }).then(() => {
-              this.loading = false
-              this.name = ''
-              this.freedomWords = ''
-              this.$v.$reset()
-           }).catch(error => console.log(error))
-        }
     }
   },
 
