@@ -28,7 +28,7 @@
                             :key="`AS-${iw}`"
                         >
                             <b-icon  icon="heart-fill" ></b-icon> 
-                            {{ pw.name }} 
+                            {{ capitalize(pw.name) }} 
                         </b-list-group-item>
                     </b-list-group>
                 </div>
@@ -85,6 +85,13 @@ export default {
             postHeartCount: false,
             postCommentCount: false,
             postData: []
+        }
+    },
+    
+    methods: {
+        capitalize(s) {
+            if (typeof s !== 'string') return ''
+            return s.charAt(0).toUpperCase() + s.slice(1)
         }
     },
 
