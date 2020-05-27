@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="freedomPost">
-        <b-form-group>
+        <b-form-group label="Name">
             <b-form-input
                 id="txtpost"
                 v-model.trim="$v.name.$model"
