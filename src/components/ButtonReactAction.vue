@@ -95,7 +95,7 @@ export default {
                     }
                 }).then(() => {
                     this.loading = false
-                    this.reactName = ''
+                    // this.reactName = ''
                     this.heartModal = false
                     this.$v.$reset()
                 }).catch(error => console.log(error))
