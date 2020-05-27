@@ -57,6 +57,7 @@ query getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+        created_at
       }
     }
     commentCount: comments_aggregate {
@@ -66,6 +67,7 @@ query getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+        created_at
       }
     }
   }

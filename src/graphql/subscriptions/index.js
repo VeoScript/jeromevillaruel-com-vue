@@ -60,6 +60,7 @@ subscription getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+        created_at
       }
     }
     commentCount: comments_aggregate {
@@ -69,6 +70,7 @@ subscription getSingleUserPost ($post_id: uuid!){
       nodes {
         id
         name
+        created_at
       }
     }
   }
