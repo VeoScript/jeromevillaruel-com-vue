@@ -36,10 +36,10 @@
             <b-icon icon="chat-square-dots-fill"></b-icon> 
                 {{ post.commentCount.aggregate.count }}
 
-            <b-modal 
+            <!-- <b-modal 
                 v-model="postCommentCount" 
                 hide-footer
-                title="Person Who React Heart <3"
+                title="Person Who Comments"
             >
                 <div v-if="$apollo.loading" class="mt-3">
                     <spinner />
@@ -54,7 +54,7 @@
                         </li>
                     </ul>
                 </div>
-            </b-modal>
+            </b-modal> -->
         </span>
     </div>
 </template>
@@ -68,6 +68,10 @@ export default {
     name: 'HeartCountModal',
 
     props: ['post_id'],
+
+    components: {
+        Spinner: () => import('@/components/Spinner')
+    },
 
     data () {
         return {
