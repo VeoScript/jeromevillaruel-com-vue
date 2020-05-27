@@ -66,6 +66,10 @@ subscription getSingleUserPost ($post_id: uuid!){
       aggregate {
         count
       }
+      nodes {
+        id
+        name
+      }
     }
   }
 }
