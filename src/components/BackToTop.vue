@@ -9,7 +9,8 @@
       <slot>
         <div class="default">
           <span>
-            <b-icon icon="chevron-double-up"></b-icon>
+            <!-- <b-icon icon="chevron-double-up"></b-icon> -->
+            Back to top 
           </span>
         </div>
       </slot>
@@ -36,11 +37,11 @@ export default {
     },
     right: {
       type: String,
-      default: '50px',
+      default: '20px',
     },
     bottom: {
       type: String,
-      default: '60px',
+      default: '30px',
     },
     scrollFn: {
       type: Function,
@@ -90,11 +91,11 @@ export default {
 
 <style lang="scss">
   .vue-back-to-top .default{
-    background: #2a3769;
-    font-size: 14px;
+    background: #12182f;
+    font-family: 'Varela Round';
+    font-size: 12px;
     color: #768ada;
-    width: 30px;
+    width: 90px;
     border-radius: 30px;
-    border: 1px solid #101425;
   }
 </style>
