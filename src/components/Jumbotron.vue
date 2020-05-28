@@ -3,8 +3,8 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="rounded" width="200" alt="placeholder" :src="require('../assets/photos/void.png')"></b-img>
-          <h1 class="mt-0 mb-1" id="j-1">Jerome Villaruel</h1>
+          <b-img rounded="rounded" width="200" alt="placeholder" :src="require('../assets/photos/void2.png')"></b-img>
+          <h1 class="mt-3 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
           </h4>
@@ -135,7 +135,7 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
-    margin-top: 65px;
+    margin-top: 60px;
   }
   .swal2-modal{
     background: #20284D;
