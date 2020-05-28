@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="rounded" width="200" alt="placeholder" :src="require('../assets/photos/veoofficial_2.png')"></b-img>
+          <b-img rounded="rounded" width="200" alt="placeholder" :src="require('../assets/photos/void.png')"></b-img>
           <h1 class="mt-0 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
