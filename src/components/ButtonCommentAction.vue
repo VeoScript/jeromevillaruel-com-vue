@@ -43,7 +43,7 @@
                 </b-form-group>
                 <b-form-group label="Comment here..." label-for="txtpost">
                     <b-textarea 
-                        v-model.trim="$v.commentUser.$model"
+                        v-model="$v.commentUser.$model"
                         :class="{ 'is-invalid' : $v.commentUser.$error, 'is-valid' : !$v.commentUser.$invalid }" id="txt-input-comment"
                     ></b-textarea>
                     <div class="invalid-feedback feedback">

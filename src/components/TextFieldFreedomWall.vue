@@ -16,7 +16,7 @@
         <b-form-group label="Post anything here...">
             <b-textarea 
             id="txtpost" 
-            v-model.trim="$v.freedomWords.$model"
+            v-model="$v.freedomWords.$model"
             :class="{ 'is-invalid' : $v.freedomWords.$error, 'is-valid' : !$v.freedomWords.$invalid }"
             ></b-textarea>
             <div class="invalid-feedback feedback">
