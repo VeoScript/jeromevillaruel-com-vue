@@ -154,10 +154,10 @@ export default {
   }
 
   #j-1{
-    font-family: 'Varela Round';
+    font-family: 'Monoton';
     font-size: 35px;
-    font-weight: bolder;
-    color: #8cd3fa;
+    font-weight: lighter;
+    color: #F66F6C;
   }
 
   #facebooklink{
