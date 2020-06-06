@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid>
-    <div class="education">
+  <div class="education">
+    <b-container fluid>
       <b-tabs id="containertabs" content-class="mt-3" fill>
         <b-tab title="College" id="containertabstitle" active>
           <b-row class="justify-content-center text-center">
@@ -39,9 +39,9 @@
           </b-row>
         </b-tab>
       </b-tabs>
-    <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
+      <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
+    </b-container>
   </div>
- </b-container>
 </template>
 
 <script>
