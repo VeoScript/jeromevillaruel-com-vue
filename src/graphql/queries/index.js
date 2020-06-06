@@ -20,7 +20,7 @@ query getCountSubscriber {
 
 export const GET_ALL_POSTS_FREEDOM_WALL = gql`
 query getAllPostFreedomWall {
-  freedom_wall(order_by: {created_at: desc}) {
+  freedom_wall(order_by: {created_at: desc}, limit: 20, offset: 0) {
     id
     name
     posts

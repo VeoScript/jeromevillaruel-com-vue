@@ -2,7 +2,7 @@ import gql from 'graphql-tag'
 
 export const GET_ALL_POSTS_FREEDOM_WALL_SUBSCRIPTION = gql`
 subscription getAllPostFreedomWall {
-  freedom_wall(order_by: {created_at: desc}) {
+  freedom_wall(order_by: {created_at: desc}, limit: 20, offset: 0) {
     id
     name
     posts
