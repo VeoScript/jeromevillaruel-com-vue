@@ -52,7 +52,6 @@
         </b-col>
       </b-row>
     </b-jumbotron>
-    <p id="copyright-home">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
   </div>
 </template>
 
@@ -136,6 +135,7 @@ export default {
     border-radius: 0px;
     color: #A8D1E7;
     margin-top: 65px;
+    height: 100vh;
   }
   .swal2-modal{
     background: #20284D;
@@ -175,11 +175,5 @@ export default {
 
   #githublink{
     background: #545B62;
-  }
-
-  #copyright-home{
-    font-size: 10px;
-    color: #A8B3DB;
-    text-align: center;
   }
 </style>

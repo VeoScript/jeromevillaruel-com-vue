@@ -1,6 +1,5 @@
 <template>
   <div class="education">
-    <b-container fluid>
       <b-tabs id="containertabs" content-class="mt-3" fill>
         <b-tab title="College" id="containertabstitle" active>
           <b-row class="justify-content-center text-center">
@@ -39,15 +38,18 @@
           </b-row>
         </b-tab>
       </b-tabs>
-      <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
-    </b-container>
+    <!-- <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p> -->
+    <foot-bar/>
   </div>
 </template>
 
 <script>
 
 export default {
-  name: "Education"
+  name: "Education",
+  components: {
+    FootBar: () => import('@/components/FootBar')
+  }
 }
 </script>
 
@@ -59,6 +61,7 @@ export default {
   #containertabs{
     background: #24315E;
     padding-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{

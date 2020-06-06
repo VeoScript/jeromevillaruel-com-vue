@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <jumbotron></jumbotron>
+    <jumbotron />
+    <foot-bar/>
   </div>
 </template>
 
@@ -9,7 +10,8 @@
 export default {
   name: "Home",
   components: {
-    jumbotron: () => import('@/components/Jumbotron.vue')
+    Jumbotron: () => import('@/components/Jumbotron.vue'),
+    FootBar: () => import('@/components/FootBar.vue')
   }
 }
 </script>

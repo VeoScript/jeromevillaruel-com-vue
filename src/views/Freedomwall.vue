@@ -52,6 +52,7 @@
         <BackToTop/>
       </b-row>
     </b-container>
+    <foot-bar/>
   </div>
 </template>
 
@@ -79,7 +80,8 @@ export default {
     ButtonActions: () => import('@/components/ButtonActions'),
     TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
     HeartCommentCountModal: () => import('@/components/HeartCommentCountModal'),
-    BackToTop: () => import('@/components/BackToTop')
+    BackToTop: () => import('@/components/BackToTop'),
+    FootBar: () => import('@/components/FootBar')
   },
 
   methods: {

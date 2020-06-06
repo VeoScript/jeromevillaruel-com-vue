@@ -49,7 +49,7 @@ hr{
   background: #3D529C;
 }
 
-h1, h2, h3, h4, h5, h6, p, span{
+h1, h2, h3, h4, h5, h6, p, span, li, i{
   cursor: default;
   font-family: 'Sen';
 }

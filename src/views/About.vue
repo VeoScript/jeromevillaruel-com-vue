@@ -70,7 +70,7 @@
           </b-row>
         </b-card>
       </b-col>
-      <b-col cols="sm-4" class="mt-3">
+      <b-col cols="sm-4" class="mt-3 mb-4">
         <b-card id="card-about" no-body class="overflow-hidden mb-2" style="max-width: 540px;">
           <b-row no-gutters>
               <b-col sm="6">
@@ -107,9 +107,10 @@
             </b-col>
           </b-row>
         </b-card>
-        <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
+        <!-- <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p> -->
       </b-col>
     </b-row>
+    <foot-bar/>
     <BackToTop/>
   </div>
 </template>
@@ -121,7 +122,8 @@ export default {
   components: {
     Navbar: () => import('@/components/Navbar.vue'),
     MyInfoCard: () => import('@/components/MyInfoCard.vue'),
-    BackToTop: () => import('@/components/BackToTop')
+    BackToTop: () => import('@/components/BackToTop'),
+    FootBar: () => import('@/components/FootBar')
   }
 }
 </script>

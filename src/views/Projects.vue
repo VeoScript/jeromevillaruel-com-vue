@@ -1,6 +1,6 @@
 <template>
-  <div class="projects p-3">
-      <b-card-group columns>
+  <div class="projects">
+      <b-card-group columns class="p-3">
         <b-card no-body id="card-about">
           <b-card-img img-top :src="require('../assets/photos/projects/inventorysystem.png')" alt="Image" class="rounded-0"></b-card-img>
           <b-card-body title="Inventory Management and POS System">
@@ -86,8 +86,9 @@
           </b-card-body>
         </b-card>
       </b-card-group>
-      <p id="copyright-home" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p>
+      <!-- <p id="copyright-home" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p> -->
       <BackToTop/>
+      <foot-bar/>
  </div>
 </template>
 
@@ -98,7 +99,8 @@ export default {
     name: 'Projects',
     components: {
       navbar: Navbar,
-      BackToTop: () => import('@/components/BackToTop')
+      BackToTop: () => import('@/components/BackToTop'),
+      FootBar: () => import('@/components/FootBar')
     }
 }
 </script>
