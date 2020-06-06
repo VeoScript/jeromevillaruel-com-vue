@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container fluid>
     <div class="education">
       <b-tabs id="containertabs" content-class="mt-3" fill>
         <b-tab title="College" id="containertabstitle" active>
