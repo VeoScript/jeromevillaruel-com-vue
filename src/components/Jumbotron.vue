@@ -170,11 +170,6 @@ export default {
     background: #1EACFF;
   }
 
-  #instagramlink{
-    background: #912EB9;
-    color: #F6D371;
-  }
-
   #githublink{
     background: #545B62;
   }
