@@ -3,9 +3,13 @@
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
       <b-navbar-brand route to="/">VEOSCRIPT<span class="subtitle">.official</span></b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-toggle target="collapse" @click="toggle = !toggle">
+        <b-icon 
+          :icon="toggle ? 'x' : 'list'">
+        </b-icon>
+      </b-navbar-toggle>
 
-      <b-collapse id="nav-collapse" is-nav>
+      <b-collapse v-model="toggle" is-nav>
         <b-navbar-nav class="ml-auto mr-5">
           <router-link to="/" :class="$route.path == '/' ? 'nav-link active' : 'nav-link'">Home</router-link>
           <router-link to="/freedomwall" :class="$route.path == '/freedomwall' ? 'nav-link active' : 'nav-link'">Freedom Wall</router-link>
@@ -20,7 +24,9 @@
 
 <script>
 export default {
-
+  data: () => ({
+    toggle: false
+  })
 }
 </script>
 
