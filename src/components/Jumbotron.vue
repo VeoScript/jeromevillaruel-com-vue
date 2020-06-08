@@ -52,6 +52,7 @@
         </b-col>
       </b-row>
     </b-jumbotron>
+    <foot-bar/>
   </div>
 </template>
 
@@ -67,7 +68,8 @@ export default {
       name: 'Jumbotron',
 
       components: {
-        Spinner: () => import('./Spinner')
+        Spinner: () => import('./Spinner'),
+        FootBar: () => import('@/components/FootBar.vue')
       },
 
       data () {
