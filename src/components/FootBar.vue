@@ -5,10 +5,10 @@
           <b-col sm="3">
             <b-img class="ologo" fluid src="@/assets/photos/final.png" width="100"></b-img>
             <p class="cname">Veoscript Official Website & Portfolio</p>
-            <i class="cname">
+            <span class="cname">
               Im a freelance designer based Philippines. I create innovative solutions that make your product or
               service more effective in the marketplace.
-            </i>
+            </span>
           </b-col>
           <b-col sm="9">
             <b-row>
@@ -65,6 +65,10 @@ footer {
 
 .cname {
   color: #fff;
+
+  span{
+    color: #fff;
+  }
 }
 
 .ul-contactus li {
