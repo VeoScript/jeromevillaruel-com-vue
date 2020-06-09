@@ -11,10 +11,10 @@
             :post_id="post_id"
         />
 
-
-        <b-button class="btn btn-secondary" id="report" v-b-tooltip.hover title="Report">
-            <b-icon icon="exclamation-triangle-fill"></b-icon>
-        </b-button>
+        <!-- component of report -->
+        <button-report-action 
+          :post_id="post_id"
+        />
 
     </b-button-group>
 </template>
@@ -30,7 +30,8 @@ export default {
 
     components: {
         ButtonCommentAction: () => import('./ButtonCommentAction'),
-        ButtonReactAction: () => import('./ButtonReactAction')
+        ButtonReactAction: () => import('./ButtonReactAction'),
+        ButtonReportAction: () => import('./ButtonReportAction')
     },
 
     props: {
