@@ -22,7 +22,7 @@
             <!-- <h1 v-show="error">{{ error }}</h1> -->
             <form ref="form" @submit.prevent="deletePost">
                 <b-form-group
-                    label="Enter the administrator Password"
+                    label="Enter the Administrator Password"
                     label-for="name-input"
                 >
                     <div class="input-group">
