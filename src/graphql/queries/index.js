@@ -84,3 +84,11 @@ query getAllUserCommentByPostID ($post_id: uuid!) {
   }
 }
 `
+export const GET_ADMIN_PASSWORD = gql`
+query showPassword {
+  administrator {
+    id
+    password
+  }
+}
+`

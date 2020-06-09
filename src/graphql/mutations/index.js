@@ -44,3 +44,29 @@ mutation commentMutation ($post_id: uuid!, $name: String!, $comment: String!) {
   }
 }
 `
+
+
+export const REPORT_DELETE_MUTATION = gql`
+mutation reportMutation($post_id: uuid!) {
+  delete_react_users(where: {post_id: {_eq: $post_id}}) {
+    affected_rows
+    returning {
+      id
+      name
+    }
+  }
+  delete_comments(where: {post_id: {_eq: $post_id}}) {
+    affected_rows
+    returning {
+      comment
+    }
+  }
+  delete_freedom_wall(where: {id: {_eq: $post_id}}) {
+    affected_rows
+    returning {
+      id
+      name
+    }
+  }
+}
+`
