@@ -61,5 +61,12 @@ mutation reportMutation($post_id: uuid!) {
       name
     }
   }
+  delete_react_users(where: {id: {_eq: $post_id}}) {
+    affected_rows
+    returning {
+      id
+      name
+    }
+  }
 }
 `
