@@ -1,7 +1,6 @@
 <template>
     <b-alert 
         show 
-        dismissible
         variant="warning"
     >
         {{ text }}
