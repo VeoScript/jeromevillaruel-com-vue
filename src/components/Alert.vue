@@ -2,9 +2,9 @@
     <b-alert 
         show 
         dismissible
-        variant="danger"
+        variant="warning"
     >
-        {{ text }} <b>&rArr;</b>
+        {{ text }}
     </b-alert>
 </template>
 
