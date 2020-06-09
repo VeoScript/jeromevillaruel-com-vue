@@ -29,8 +29,8 @@
                     Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="clock"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                   </span>
                 </b-card-title>
-                <b-card-text max-width="100">
-                    {{ post.posts }}
+                <b-card-text max-width="100" class="show-post">
+                  {{post.posts}}
                 </b-card-text>
                 <br>
 
@@ -118,6 +118,12 @@ export default {
 <style>
   .freedomwall{
     margin-top: 100px;
+  }
+
+  .show-post {
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    font-family: inherit;
   }
 
   #card-about{
