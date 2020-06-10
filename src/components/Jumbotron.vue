@@ -162,6 +162,13 @@ export default {
     color: #F66F6C;
   }
 
+  #j-2{
+    font-family: 'Varela Round';
+    font-size: 20px;
+    font-weight: bolder;
+    color: #fff;
+  }
+
   #facebooklink{
     background: #3f67b3;
   }
