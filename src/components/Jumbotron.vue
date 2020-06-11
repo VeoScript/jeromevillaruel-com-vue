@@ -4,7 +4,7 @@
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
           <b-img rounded="rounded" fluid width="600" alt="placeholder" :src="require('../assets/photos/final.png')"></b-img>
-          <h1 class="mt-3 mb-1" id="j-1">Jerome Villaruel</h1>
+          <h1 class="mt-2 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
           </h4>
@@ -158,7 +158,6 @@ export default {
   #j-1{
     font-family: 'Monoton';
     font-size: 35px;
-    font-weight: lighter;
     color: #F66F6C;
   }
 
