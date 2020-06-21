@@ -22,7 +22,6 @@
             <div class="invalid-feedback feedback">
                 <span v-if="!$v.freedomWords.required">You posts is required</span>
                 <span v-if="!$v.freedomWords.minLength">You posts must have at least {{ $v.freedomWords.$params.minLength.min }} letters. </span>
-                <span v-if="!$v.freedomWords.maxLength">You posts must have at most {{ $v.freedomWords.$params.maxLength.max }} letters.</span>
             </div>
         </b-form-group> <!-- post text area button -->
 
@@ -73,9 +72,8 @@ export default {
             maxLength: maxLength(25)
         },
         freedomWords: {
-        required,
-        minLength: minLength(20),
-        maxLength: maxLength(200)
+            required,
+            minLength: minLength(20),
         }
     },
 
