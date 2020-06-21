@@ -30,7 +30,18 @@
                   </span>
                 </b-card-title>
                 <b-card-text max-width="100" class="show-post">
-                  {{post.posts}}
+                  <span v-if="post.posts.length >= 200 && !readMore">{{ post.posts.slice(0, 200) }}....
+                    <br>
+                    <a href="#" @click="readMore = !readMore">Read more</a>
+                  </span>
+                  <span v-else-if="post.posts.length > 200 && readMore">
+                    {{ post.posts }}
+                    <br>
+                    <a href="#" @click="readMore = !readMore">Show less</a>
+                  </span>
+                  <span v-else>
+                    {{ post.posts }}
+                  </span>
                 </b-card-text>
                 <br>
 
@@ -69,7 +80,8 @@ export default {
       posts: [],
       loading: false,
       heartModal: false,
-      postHeartCount: false
+      postHeartCount: false,
+      readMore: false
     }
   },
 
