@@ -27,8 +27,19 @@
                                 Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                             </span>
                             </b-card-title>
-                            <b-card-text max-width="100">
-                                {{ post.posts }}
+                            <b-card-text max-width="100" class="show-post">
+                                <span v-if="post.posts.length >= 200 && !readMore">{{ post.posts.slice(0, 200) }}....
+                                    <br>
+                                    <a href="#" @click="readMore = !readMore">Read more</a>
+                                </span>
+                                <span v-else-if="post.posts.length > 200 && readMore">
+                                    {{ post.posts }}
+                                    <br>
+                                    <a href="#" @click="readMore = !readMore">Show less</a>
+                                </span>
+                                <span v-else>
+                                    {{ post.posts }}
+                                </span>
                             </b-card-text>
                             <br>
                             
@@ -68,7 +79,8 @@ export default {
     data () {
         return {
             postData: [],
-            postId: this.$route.params.id
+            postId: this.$route.params.id,
+            readMore: false
         }
     },
 
@@ -175,5 +187,11 @@ export default {
   .breadcrumb .breadcrumb-item a:hover{
       color: #778ce2;
       text-decoration: none;
+  }
+
+  .show-post {
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    font-family: inherit;
   }
 </style>
