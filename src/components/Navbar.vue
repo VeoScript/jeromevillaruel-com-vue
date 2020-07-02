@@ -1,7 +1,10 @@
 <template>
   <div class="fixed-top top">
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
-      <b-navbar-brand route to="/">VEOSCRIPT<span class="subtitle">.official</span></b-navbar-brand>
+      <b-navbar-brand route to="/">
+        <!-- VEOSCRIPT<span class="subtitle">.official</span> -->
+        <b-img class="ologo" fluid src="@/assets/photos/coverwhite.png" width="150"></b-img>
+        </b-navbar-brand>
 
       <b-navbar-toggle target="collapse" @click="toggle = !toggle">
         <b-icon 
