@@ -37,7 +37,7 @@ export default {
 
   #navigationbar{
     background: #495dac;
-    padding: 20px;
+    padding: 14px;
     box-shadow: 1px 1px #3D529C;
   }
   
