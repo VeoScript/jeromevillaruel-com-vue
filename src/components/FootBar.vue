@@ -53,6 +53,7 @@
 <style lang="scss" scoped>
 footer {
   background: #0e152c;
+  margin-top: 10px;
   padding: 60px 0;
   display: flex;
   justify-content: center;

@@ -136,8 +136,7 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
-    margin-top: 40px;
-    height: 100vh;
+    margin-top: 60px;
   }
   .swal2-modal{
     background: #20284D;
