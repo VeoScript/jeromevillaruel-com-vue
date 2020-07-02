@@ -40,7 +40,6 @@ export default {
   
   #navigationbar .navbar-brand{
     font-family: 'Monoton';
-    font-weight: lighter;
     color: #fff;
   }
 
