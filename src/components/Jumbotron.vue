@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img rounded="rounded" fluid width="600" alt="placeholder" :src="require('../assets/photos/final.png')"></b-img>
+          <b-img rounded="rounded" fluid width="300" alt="placeholder" :src="require('../assets/photos/white.png')"></b-img>
           <h1 class="mt-2 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
@@ -136,8 +136,8 @@ export default {
     background: #24315E;
     border-radius: 0px;
     color: #A8D1E7;
-    margin-top: 65px;
-    height: 90vh;
+    margin-top: 40px;
+    height: 100vh;
   }
   .swal2-modal{
     background: #20284D;
@@ -158,7 +158,7 @@ export default {
   #j-1{
     font-family: 'Monoton';
     font-size: 35px;
-    color: #F66F6C;
+    color: #DEACF5;
   }
 
   #j-2{

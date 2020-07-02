@@ -3,7 +3,7 @@
       <footer class="bd-footer text-muted docs-border">
         <b-row class="justify-content-center container">
           <b-col sm="3">
-            <b-img class="ologo" fluid src="@/assets/photos/final.png" width="100"></b-img>
+            <b-img class="ologo" fluid src="@/assets/photos/coverwhite.png" width="150"></b-img>
             <p class="cname">Veoscript Official Website & Portfolio</p>
             <span class="cname">
               Im a freelance designer based Philippines. I create innovative solutions that make your product or
@@ -61,6 +61,7 @@ footer {
 
 .ologo{
   border-radius: 3px;
+  margin-top: -20px;
 }
 
 .cname {

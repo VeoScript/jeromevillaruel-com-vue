@@ -35,6 +35,7 @@ export default {
   #navigationbar{
     background: #495dac;
     padding: 20px;
+    box-shadow: 1px 1px #3D529C;
   }
   
   #navigationbar .navbar-brand{
@@ -45,7 +46,7 @@ export default {
 
   .subtitle{
     font-family: 'Sen';
-    font-size: 10px;
+    font-size: 12px;
     color: #dbdbdb;
     cursor: pointer;
   }
