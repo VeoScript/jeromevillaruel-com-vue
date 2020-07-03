@@ -12,7 +12,7 @@
             <!-- End TextField Form -->
 
           </b-card>
-          <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p>
+          <p id="copyright">Kindly keep your posts respectful and follow the system functionality here in Freedom Wall.</p>
         </b-col>
 
         <b-col sm="8" >
