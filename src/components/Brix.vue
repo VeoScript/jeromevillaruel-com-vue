@@ -56,5 +56,6 @@
     font-weight: lighter;
     color: #fff;
     margin-top: 15px;
+    cursor: default;
   }
 </style>
