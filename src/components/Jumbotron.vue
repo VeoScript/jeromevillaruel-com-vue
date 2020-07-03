@@ -55,6 +55,7 @@
     <b-container>
       <brix/>
     </b-container>
+    <BackToTop/>
     <foot-bar/>
   </div>
 </template>
@@ -72,6 +73,7 @@ export default {
 
       components: {
         Spinner: () => import('./Spinner'),
+        BackToTop: () => import('@/components/BackToTop'),
         FootBar: () => import('@/components/FootBar.vue'),
         Brix: () => import('@/components/Brix.vue')
       },

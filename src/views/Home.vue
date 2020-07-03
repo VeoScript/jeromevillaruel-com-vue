@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <jumbotron />
+    <BackToTop/>
   </div>
 </template>
 
@@ -9,7 +10,8 @@
 export default {
   name: "Home",
   components: {
-    Jumbotron: () => import('@/components/Jumbotron.vue')
+    Jumbotron: () => import('@/components/Jumbotron.vue'),
+    BackToTop: () => import('@/components/BackToTop')
   }
 }
 </script>
