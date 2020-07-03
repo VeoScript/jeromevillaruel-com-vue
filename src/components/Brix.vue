@@ -22,7 +22,7 @@
             We sang that song when we performed it every event in our school, and that song was so famous those days. <br>
             From the year of 2012 I learned Piano by my own and created a song <b>"Hulmahan"</b>, <br>
             dedicated to those people who maked broken promises. <br>
-            And now 2020 I'm continue making a songs in genre of Pop and Hiphop. <br>
+            And now I'm continue making a songs in genre of Pop and Hiphop. <br>
             Kindly support me in Underground Music Industry.
           </div>
         </b-col>
