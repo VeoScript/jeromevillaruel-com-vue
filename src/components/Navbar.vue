@@ -36,9 +36,9 @@ export default {
 <style>
 
   #navigationbar{
-    background: #495dac;
+    background: #0E152C;
     padding: 14px;
-    box-shadow: 1px 1px #3D529C;
+    box-shadow: 1px 1px #1D2B5A;
   }
   
   #navigationbar .navbar-brand{
