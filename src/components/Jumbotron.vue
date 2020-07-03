@@ -52,6 +52,9 @@
         </b-col>
       </b-row>
     </b-jumbotron>
+    <b-container>
+      <brix/>
+    </b-container>
     <foot-bar/>
   </div>
 </template>
@@ -69,7 +72,8 @@ export default {
 
       components: {
         Spinner: () => import('./Spinner'),
-        FootBar: () => import('@/components/FootBar.vue')
+        FootBar: () => import('@/components/FootBar.vue'),
+        Brix: () => import('@/components/Brix.vue')
       },
 
       data () {

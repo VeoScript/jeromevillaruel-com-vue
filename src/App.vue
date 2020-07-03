@@ -22,6 +22,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 @import url('https://fonts.googleapis.com/css?family=Leckerli+One');
 @import url('https://fonts.googleapis.com/css?family=Sen');
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@import url('https://fonts.googleapis.com/css?family=Quando');
 
 #app {
   font-family: 'Varela Round';
