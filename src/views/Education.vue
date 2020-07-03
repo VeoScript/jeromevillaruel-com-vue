@@ -55,7 +55,7 @@ export default {
 
 <style>
   .education{
-    margin-top: 80px;
+    margin-top: 76px;
   }
 
   #containertabs{
