@@ -24,6 +24,8 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Sen');
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 @import url('https://fonts.googleapis.com/css?family=Quando');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
 
 #app {
   font-family: 'Varela Round';

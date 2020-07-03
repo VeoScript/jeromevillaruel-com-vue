@@ -53,7 +53,6 @@
   .xbtxt{
     font-family: 'Nunito';
     font-size: 18px;
-    font-weight: lighter;
     color: #fff;
     margin-top: 15px;
     cursor: default;
