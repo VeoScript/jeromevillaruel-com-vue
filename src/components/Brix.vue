@@ -17,7 +17,7 @@
           <div class="xbtxt">
             <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, eveniet voluptatibus culpa fugit voluptatem earum ipsam possimus dolor? Blanditiis non aliquid laboriosam molestiae excepturi tempore eligendi temporibus voluptates corrupti sed! -->
             Aside from being a Programmer I have also skills in music. <br>
-            Year 2010 when i found myself that i know how to composed a song, <br>
+            Year 2010 when I found myself that I know how to composed a song, <br>
             including my first composition <b>"Walang Iwanan"</b> this song was dedicated to my barkadas in elementary. <br>
             We sang that song when we performed it every event in our school, and that song was so famous those days. <br>
             From the year of 2012 I learned Piano by my own and created a song <b>"Hulmahan"</b>, <br>
