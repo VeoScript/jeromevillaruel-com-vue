@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" id="navigationbar" type="dark">
       <b-navbar-brand route to="/">
         <!-- VEOSCRIPT<span class="subtitle">.official</span> -->
-        <b-img class="ml-3" fluid src="@/assets/photos/coverwhite.png" width="150"></b-img>
+        <b-img class="ml-3" fluid src="@/assets/photos/logoveo.png" width="150"></b-img>
       </b-navbar-brand>
 
       <b-navbar-toggle target="collapse" @click="toggle = !toggle">
