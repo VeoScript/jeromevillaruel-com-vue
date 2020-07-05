@@ -3,7 +3,7 @@
     <b-jumbotron>
       <b-row class="justify-content-center text-center">
         <b-col cols="sm-12">
-          <b-img fluid width="250" alt="placeholder" :src="require('../assets/photos/white.png')"></b-img>
+          <b-img fluid width="250" alt="placeholder" :src="require('@/assets/photos/white.png')"></b-img>
           <h1 class="mt-2 mb-1" id="j-1">Jerome Villaruel</h1>
           <h4 class="mb-2" id="j-2">
             Information Technology, Web Developer and UX & UI Designer.
@@ -71,8 +71,7 @@ export default {
       name: 'Jumbotron',
 
       components: {
-        Spinner: () => import('./Spinner'),
-        BackToTop: () => import('@/components/BackToTop'),
+        Spinner: () => import('@/components/Spinner'),
         FootBar: () => import('@/components/FootBar.vue'),
         Brix: () => import('@/components/Brix.vue')
       },
