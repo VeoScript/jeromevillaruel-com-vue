@@ -60,10 +60,8 @@
               </div>
             </b-card>
         </b-col>
-        <BackToTop/>
       </b-row>
     </b-container>
-    <foot-bar/>
   </div>
 </template>
 
@@ -90,9 +88,7 @@ export default {
     Spinner: () => import('@/components/Spinner'),
     ButtonActions: () => import('@/components/ButtonActions'),
     TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
-    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal'),
-    BackToTop: () => import('@/components/BackToTop'),
-    FootBar: () => import('@/components/FootBar')
+    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
   },
 
   methods: {

@@ -110,7 +110,6 @@
         <!-- <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p> -->
       </b-col>
     </b-row>
-    <foot-bar/>
   </div>
 </template>
 
@@ -119,8 +118,7 @@
 export default {
   name: "About",
   components: {
-    MyInfoCard: () => import('@/components/MyInfoCard.vue'),
-    FootBar: () => import('@/components/FootBar')
+    MyInfoCard: () => import('@/components/MyInfoCard.vue')
   }
 }
 </script>

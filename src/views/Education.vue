@@ -38,20 +38,8 @@
           </b-row>
         </b-tab>
       </b-tabs>
-    <!-- <p id="copyright-home" class="mt-3">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p> -->
-    <foot-bar/>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: "Education",
-  components: {
-    FootBar: () => import('@/components/FootBar')
-  }
-}
-</script>
 
 <style>
   .education{

@@ -86,21 +86,8 @@
           </b-card-body>
         </b-card>
       </b-card-group>
-      <!-- <p id="copyright-home" class="text-center">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. <br> Powered by Vue JS.</p> -->
-      <BackToTop/>
-      <foot-bar/>
  </div>
 </template>
-
-<script>
-export default {
-    name: 'Projects',
-    components: {
-      BackToTop: () => import('@/components/BackToTop'),
-      FootBar: () => import('@/components/FootBar')
-    }
-}
-</script>
 
 <style>
   .projects{
