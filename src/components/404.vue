@@ -1,6 +1,5 @@
 <template>
   <div class="notfound">
-    <navbar></navbar>
     <b-container class="nf-container">
       <h1 class="nf text-center mt-5">404 Not Found</h1>
       <h2 class="nf2 text-center">This page is unknown</h2>

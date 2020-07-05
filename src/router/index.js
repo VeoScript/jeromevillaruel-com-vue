@@ -41,7 +41,7 @@ const routes = [
   {
     path: "*", 
     name: 'NotFound',
-    component: () => import('@/components/NotFound.vue')
+    component: () => import('@/components/404.vue')
   }
 ];
 
