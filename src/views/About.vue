@@ -74,7 +74,7 @@
         <b-card id="card-about" no-body class="overflow-hidden mb-2" style="max-width: 540px;">
           <b-row no-gutters>
               <b-col sm="6">
-              <b-card-img :src="require('../assets/photos/veo.jpg')" alt="Image" class="rounded-0"></b-card-img>
+              <b-card-img :src="require('@/assets/photos/veo.jpg')" alt="Image" class="rounded-0"></b-card-img>
               </b-col>
               <b-col sm="6">
               <b-card-body title="Villaruel Jerome">
@@ -107,21 +107,10 @@
             </b-col>
           </b-row>
         </b-card>
-        <!-- <p id="copyright">&copy;2020 Veoscript.Official, Personal Webpage. Designed and Developed by VEOSCRIPT & ACATZK. Powered by Vue JS.</p> -->
       </b-col>
     </b-row>
   </div>
 </template>
-
-<script>
-
-export default {
-  name: "About",
-  components: {
-    MyInfoCard: () => import('@/components/MyInfoCard.vue')
-  }
-}
-</script>
 
 <style>
   .about{

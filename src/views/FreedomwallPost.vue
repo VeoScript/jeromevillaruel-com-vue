@@ -93,7 +93,7 @@ export default {
     components: {
         Spinner: () => import('@/components/Spinner'),
         ButtonActions: () => import('@/components/pages/freedomwall/ButtonActions'),
-        MyInfoCard: () => import('@/components/MyInfoCard'),
+        MyInfoCard: () => import('@/components/pages/about/MyInfoCard'),
         CommentPost: () => import('./CommentPost'),
         HeartCommentCountModal: () => import('@/components/pages/freedomwall/HeartCommentCountModal')
     },
