@@ -4,13 +4,15 @@
     <vue-page-transition name="fade-in-right" class="content">
       <router-view />
     </vue-page-transition>
+    <back-to-top />
   </div>
 </template>
 
 <script>
 export default {
    components: {
-      Navbar: () => import('@/components/layouts/Navbar')
+      Navbar: () => import('@/components/layouts/Navbar'),
+      BackToTop: () => import('@/components/BackToTop')
    }
 }
 </script>
