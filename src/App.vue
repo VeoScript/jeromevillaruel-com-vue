@@ -10,7 +10,7 @@
 <script>
 export default {
    components: {
-      Navbar: () => import('@/components/Navbar.vue')
+      Navbar: () => import('@/components/layouts/Navbar')
    }
 }
 </script>

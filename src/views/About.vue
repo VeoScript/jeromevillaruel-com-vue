@@ -120,7 +120,6 @@
 export default {
   name: "About",
   components: {
-    Navbar: () => import('@/components/Navbar.vue'),
     MyInfoCard: () => import('@/components/MyInfoCard.vue'),
     BackToTop: () => import('@/components/BackToTop'),
     FootBar: () => import('@/components/FootBar')

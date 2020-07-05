@@ -93,12 +93,9 @@
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
-
 export default {
     name: 'Projects',
     components: {
-      navbar: Navbar,
       BackToTop: () => import('@/components/BackToTop'),
       FootBar: () => import('@/components/FootBar')
     }

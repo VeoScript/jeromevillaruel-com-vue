@@ -87,7 +87,6 @@ export default {
 
 
   components: {
-    navbar: () => import('@/components/Navbar.vue'),
     Spinner: () => import('@/components/Spinner'),
     ButtonActions: () => import('@/components/ButtonActions'),
     TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
