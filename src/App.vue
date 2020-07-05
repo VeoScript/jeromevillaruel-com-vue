@@ -1,27 +1,41 @@
 <template>
-  <div id="app">
+
+  <app-bar>
 
     <nav-bar /> <!-- NAVIGATION BAR -->
 
     <vue-page-transition name="fade-in-right" class="content">
+
       <router-view />  <!-- DYNAMIC CONTENT LOADED -->
+
     </vue-page-transition>
 
     <foot-bar />  <!-- FOOTER BAR -->
 
     <back-to-top />  <!-- SCROLL UP -->
 
-  </div>
+  </app-bar> <!-- APP BAR SLOT WITH id=app -->
+
 </template>
 
 <script>
+
 export default {
+
    components: {
+     
+      AppBar: () => import('@/components/layouts/AppBar'),
+
       NavBar: () => import('@/components/layouts/Navbar'),
+
       BackToTop: () => import('@/components/BackToTop'),
+
       FootBar: () => import('@/components/layouts/FootBar')
+      
    }
+
 }
+
 </script>
 
 <style lang="scss">
