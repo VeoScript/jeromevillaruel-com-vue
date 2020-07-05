@@ -92,10 +92,10 @@ export default {
 
     components: {
         Spinner: () => import('@/components/Spinner'),
-        ButtonActions: () => import('@/components/ButtonActions'),
+        ButtonActions: () => import('@/components/pages/freedomwall/ButtonActions'),
         MyInfoCard: () => import('@/components/MyInfoCard'),
         CommentPost: () => import('./CommentPost'),
-        HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
+        HeartCommentCountModal: () => import('@/components/pages/freedomwall/HeartCommentCountModal')
     },
 
     apollo: {

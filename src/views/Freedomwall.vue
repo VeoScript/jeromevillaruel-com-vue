@@ -86,9 +86,9 @@ export default {
 
   components: {
     Spinner: () => import('@/components/Spinner'),
-    ButtonActions: () => import('@/components/ButtonActions'),
-    TextFieldFreedomWall: () => import('@/components/TextFieldFreedomWall'),
-    HeartCommentCountModal: () => import('@/components/HeartCommentCountModal')
+    ButtonActions: () => import('@/components/pages/freedomwall/ButtonActions'),
+    TextFieldFreedomWall: () => import('@/components/pages/freedomwall/TextFieldFreedomWall'),
+    HeartCommentCountModal: () => import('@/components/pages/freedomwall/HeartCommentCountModal')
   },
 
   methods: {

@@ -81,7 +81,7 @@ export default {
     name: 'ButtonReportAction',
 
     components: {
-        Alert: () => import('./Alert')
+        Alert: () => import('@/components/Alert')
     },
 
     props: ['post_id'],
