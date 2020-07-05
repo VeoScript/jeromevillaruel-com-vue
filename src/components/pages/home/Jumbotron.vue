@@ -71,7 +71,7 @@ export default {
 
       components: {
         Spinner: () => import('@/components/Spinner'),
-        Brix: () => import('@/components/Brix.vue')
+        Brix: () => import('./Brix.vue')
       },
 
       data () {
