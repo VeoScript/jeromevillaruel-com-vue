@@ -111,7 +111,6 @@
       </b-col>
     </b-row>
     <foot-bar/>
-    <BackToTop/>
   </div>
 </template>
 
@@ -121,7 +120,6 @@ export default {
   name: "About",
   components: {
     MyInfoCard: () => import('@/components/MyInfoCard.vue'),
-    BackToTop: () => import('@/components/BackToTop'),
     FootBar: () => import('@/components/FootBar')
   }
 }
