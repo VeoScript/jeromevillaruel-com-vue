@@ -73,6 +73,7 @@
 
 <script>
 
+import { toastAlertStatus } from '@/assets/js/toastAlertStatus'
 import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 import { GET_ADMIN_PASSWORD } from '@/graphql/queries'
 import { REPORT_DELETE_MUTATION } from '@/graphql/mutations'
@@ -120,6 +121,7 @@ export default {
                             post_id: this.post_id
                         }
                     }).then(() => {
+                        toastAlertStatus('success', 'Successfully Deleted Post!')
                         this.loading = false
                         this.password = ''
                         this.reportModal = false
@@ -127,6 +129,7 @@ export default {
                     }).catch(error => console.log(error))
                 } else {
                     this.error = 'Your password is absolutely invalid...'
+                    toastAlertStatus('warning', 'Unauthorized Personnel are strictly prohibated!')
                 }
             }
         },
