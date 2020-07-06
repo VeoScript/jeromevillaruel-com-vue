@@ -49,8 +49,9 @@
 
 <script>
 
-import { required, minLength, maxLength } from 'vuelidate/lib/validators'
+import { toastAlertStatus } from '@/assets/js/toastAlertStatus'
 
+import { required, minLength, maxLength } from 'vuelidate/lib/validators'
 
 import { POST_FREEDOM_WALL } from '@/graphql/mutations'
 
@@ -93,11 +94,12 @@ export default {
                     posts: freedomWords
                 }
             }).then(() => {
+                toastAlertStatus('success', `Thank you for your post ${this.name}`)
                 this.loading = false
                 // this.name = ''
                 this.freedomWords = ''
                 this.$v.$reset()
-            }).catch(error => console.log(error))
+            }).catch(error => toastAlertStatus('error', error))
             }
         }
     }
