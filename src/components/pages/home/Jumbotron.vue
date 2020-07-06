@@ -140,17 +140,6 @@ export default {
     color: #A8D1E7;
     margin-top: 75px;
   }
-  .swal2-modal{
-    background: #20284D;
-    font-family: 'Varela Round';
-    color: white;
-  }
-  
-  .swal2-title{
-    font-family: 'Varela Round';
-    color: #fff;
-    margin: 10px;
-  }
 
   #n-subscribers{
     color: #ECAB44;
