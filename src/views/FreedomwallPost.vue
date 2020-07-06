@@ -24,7 +24,7 @@
                             <b-card-title>
                             <b-icon icon="chat-quote"></b-icon> {{ capitalize(post.name) }}
                             <br><span id="lbldate">
-                                Posted on {{ post.created_at.split('T')[0] }} <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
+                                Posted on <date-format :created_at="post.created_at.split('T')[0]" /> <b-icon icon="alarm"></b-icon> <timeago :datetime="post.created_at" :auto-update="60"></timeago>
                             </span>
                             </b-card-title>
                             <b-card-text max-width="100" class="show-post">
@@ -95,7 +95,8 @@ export default {
         ButtonActions: () => import('@/components/pages/freedomwall/ButtonActions'),
         MyInfoCard: () => import('@/components/pages/about/MyInfoCard'),
         CommentPost: () => import('./CommentPost'),
-        HeartCommentCountModal: () => import('@/components/pages/freedomwall/HeartCommentCountModal')
+        HeartCommentCountModal: () => import('@/components/pages/freedomwall/HeartCommentCountModal'),
+        DateFormat: () => import('@/components/DateFormat')
     },
 
     apollo: {
