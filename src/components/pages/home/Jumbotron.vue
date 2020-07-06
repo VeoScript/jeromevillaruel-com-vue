@@ -60,76 +60,76 @@
 
 <script>
 
-
+import { toastAlertStatus } from '@/assets/js/toastAlertStatus'
 import { required, email } from 'vuelidate/lib/validators'
 import { ADD_SUBSCRIBER_MUTATION } from '@/graphql/mutations'
 import { GET_ALL_SUBSCRIBER_QUERY, COUNT_ALL_SUBSCRIBER_QUERY } from '@/graphql/queries'
 import { GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION, COUNT_ALL_SUBSCRIBER_SUBSCRIPTION } from '@/graphql/subscriptions'
 
 export default {
-      name: 'Jumbotron',
+  name: 'Jumbotron',
 
-      components: {
-        Spinner: () => import('@/components/Spinner'),
-        Brix: () => import('./Brix.vue')
-      },
+  components: {
+    Spinner: () => import('@/components/Spinner'),
+    Brix: () => import('./Brix.vue')
+  },
 
-      data () {
-        return {
-           email: '',
-           loading: false,
-           counter: null
+  data () {
+    return {
+        email: '',
+        loading: false,
+        counter: null
+    }
+  },
+
+  validations: {
+    email: {
+        required,
+        email
+    }
+  },
+
+  methods: {
+    subscribe() {
+      this.$v.$touch()
+        if (!this.$v.$invalid) {
+            this.loading = true
+            this.$apollo.mutate({
+              mutation: ADD_SUBSCRIBER_MUTATION,
+              variables: {
+                email: this.email
+              },
+              refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
+            }).then(() => {
+              this.loading = false
+              this.$v.$reset()
+              toastAlertStatus('success', `You are now offically subscribe ${this.email} to veoscript official.`)
+              this.email = ''
+            }).catch(error => toastAlertStatus('error', error))
         }
-      },
+    }
+  },
 
-      validations: {
-        email: {
-            required,
-            email
-        }
-      },
-
-      methods: {
-        subscribe() {
-          this.$v.$touch()
-            if (!this.$v.$invalid) {
-               this.loading = true
-               this.$apollo.mutate({
-                 mutation: ADD_SUBSCRIBER_MUTATION,
-                 variables: {
-                   email: this.email
-                 },
-                 refetchQueries: ['getCountSubscriber', 'getAllSubscriber']
-               }).then(() => {
-                  this.loading = false
-                  this.$v.$reset()
-                  this.$swal(this.email + ` is successfully subscribed to Jerome Villaruel Official Website. Thank you.`)
-                  this.email = ''
-               }).catch(error => console.log(error))
+  apollo: {
+    villaruel_subscriber: {
+      query: GET_ALL_SUBSCRIBER_QUERY,
+      subscribeToMore: {
+        document: GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION,
+        updateQuery(previousResult, { subscriptionData }) {
+          if (previousResult) {
+            return {
+              villaruel_subscriber: [
+                ...subscriptionData.data.villaruel_subscriber
+              ]
             }
-        }
-      },
-
-      apollo: {
-        villaruel_subscriber: {
-          query: GET_ALL_SUBSCRIBER_QUERY,
-          subscribeToMore: {
-            document: GET_ALL_SUBSCRIBER_QUERY_SUBSCRIPTION,
-            updateQuery(previousResult, { subscriptionData }) {
-              if (previousResult) {
-                return {
-                  villaruel_subscriber: [
-                    ...subscriptionData.data.villaruel_subscriber
-                  ]
-                }
-              }
-            }
-          },
-          result ({ data }) {
-            this.counter = data.villaruel_subscriber
           }
         }
+      },
+      result ({ data }) {
+        this.counter = data.villaruel_subscriber
       }
+    }
+  }
 }
 </script>
 
