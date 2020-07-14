@@ -16,9 +16,9 @@
         <b-navbar-nav class="ml-auto mr-5">
           <router-link to="/" :class="$route.path == '/' ? 'nav-link active' : 'nav-link'">Home</router-link>
           <router-link to="/freedomwall" :class="$route.path == '/freedomwall' ? 'nav-link active' : 'nav-link'">Freedom Wall</router-link>
-          <router-link to="/about" :class="$route.path == '/about' ? 'nav-link active' : 'nav-link'">About</router-link>
-          <router-link to="/education" :class="$route.path == '/education' ? 'nav-link active' : 'nav-link'">Education</router-link>
           <router-link to="/projects" :class="$route.path == '/projects' ? 'nav-link active' : 'nav-link'">Projects</router-link>
+          <router-link to="/education" :class="$route.path == '/education' ? 'nav-link active' : 'nav-link'">Education</router-link>
+          <router-link to="/about" :class="$route.path == '/about' ? 'nav-link active' : 'nav-link'">About</router-link>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>

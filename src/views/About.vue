@@ -2,7 +2,6 @@
    <b-container fluid class="main-section">
      <b-row>
         <b-col md="12" sm="12" class="image-section">
-            <!-- <b-img fluid :src="require('@/assets/photos/coverphoto.png')" class="coverphoto" /> -->
             <div class="frontpage"></div>
         </b-col>
         <b-row class="user-left-part">
@@ -85,19 +84,24 @@
                       <b-col md="12">
                         <b-row class="image-right-part">
                           <b-col md="6" class="pull-left image-right-detail">
-                            <p>TODAYHIGHLIGHT</p>
+                            <p>HIGHLIGHT</p>
                           </b-col>
                           <b-col md="6" class="pull-right image-right-detail text-right">
-                            <span><a href="http://nicesnippets.com">more</a></span>
+                            <span><a href="#">view songs</a></span>
                           </b-col>
                         </b-row>
                       </b-col>
                       <b-col md="12" class="image-right">
-                        <img src="http://nicesnippets.com/demo/Nature-Night-Sky-Stars-Blurred-Light-Show-Mountains-WallpapersByte-com-1920x1080.jpg">
+                        <img :src="require('@/assets/photos/veo_black.jpg')">
                       </b-col>
                       <b-col md="12" class="image-right-detail-section2">
-                        <p>Urban planning consulation</p>
-                        <span>Lorem ipsum dolor sit amet, consectetur adipisibj.</span>
+                        <p>THE VEOSCRIPT</p>
+                        <span>
+                          Siyam na kilometro at bangin ang iyong lalakbayin, mabayaran mo lang ang iyong pagiging taksil.
+                          Mas pinili mo ang landas ng siyam, imbis na sa ikatlo ka mapunta di mo yun nagawa dahil sa pagiging swa-il.
+                          <br>
+                          -Jerome Villaruel
+                        </span>
                       </b-col>
                     </b-row>
                   </b-col>
