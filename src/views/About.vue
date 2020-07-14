@@ -219,8 +219,8 @@
   margin: 0px;
 }
 .user-image img{
-  width:100px;
-  height:100px;
+  width:150px;
+  height:150px;
 }
 .user-profil-part{
   padding-bottom:30px;
@@ -228,7 +228,7 @@
 }
 .resume{
   width:50%;
-  margin-top:70px;
+  margin-top:110px;
   font-size: 11px;
   border:1px solid #DDDDDD;
   background-color: #fff;
