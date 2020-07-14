@@ -76,7 +76,7 @@
                       <b-tabs content-class="mt-3 abouttabs" fill>
                         <b-tab title="Basic Info" active><p>Basic Info</p></b-tab>
                         <b-tab title="Work Experience"><p>I'm the second tab</p></b-tab>
-                        <b-tab title="Second"><p>I'm the second tab</p></b-tab>
+                        <b-tab title="Education"><p>I'm the second tab</p></b-tab>
                       </b-tabs>
                     </div>
                   </b-col>
