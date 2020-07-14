@@ -98,7 +98,7 @@
                         <p>THE VEOSCRIPT</p>
                         <span>
                           Siyam na kilometro at bangin ang iyong lalakbayin, mabayaran mo lang ang iyong pagiging taksil.
-                          Mas pinili mo ang landas ng siyam, imbis na sa ikatlo ka mapunta di mo yun nagawa dahil sa pagiging swa-il.
+                          Mas pinili mo ang landas ng siyam, imbis na sa ikatlo ka mapunta di mo yun nagawa dahil sa pagiging suwail.
                           <br>
                           -Jerome Villaruel
                         </span>
