@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-3">
     <b-container>
       <b-row class="justify-content-center text-center">
         <b-col sm="4">
@@ -27,7 +27,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container class="mb-3">
+    <b-container>
       <hr class="hr2">
       <h2 class="ms mb-3">MY SONGS</h2>
       <b-card no-body id="card-about" class="overflow-hidden mt-2" style="max-width: 1000px;">

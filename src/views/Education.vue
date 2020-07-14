@@ -44,6 +44,7 @@
 <style lang="scss">
   .education{
     margin-top: 76px;
+    margin-bottom: 30px;
   }
 
   #containertabs ul{

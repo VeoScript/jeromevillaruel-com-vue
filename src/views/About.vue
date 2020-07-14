@@ -76,7 +76,7 @@
                       <b-tabs content-class="mt-3 abouttabs" fill>
                         <b-tab title="Basic Info" active><p>Basic Info</p></b-tab>
                         <b-tab title="Work Experience"><p>I'm the second tab</p></b-tab>
-                        <b-tab title="Education"><p>I'm the second tab</p></b-tab>
+                        <b-tab title="Developers"><p>I'm the second tab</p></b-tab>
                       </b-tabs>
                     </div>
                   </b-col>
@@ -146,7 +146,7 @@
 .follow{
   width:50%;
   margin-top:70px;
-  font-size:12px;
+  font-size: 10px;
   border:1px solid #DDDDDD;
   background-color: #fff;
   font-weight: lighter; 
