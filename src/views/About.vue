@@ -90,8 +90,8 @@
                                   <span>Roman Catholic</span>
                                 </b-col>
                                 <b-col md="2" sm="2" class="mt-3">
-                                  <p>Gender</p>
-                                  <span>Male</span>
+                                  <p>Status</p>
+                                  <span>Single</span>
                                 </b-col>
                                 <b-col md="12" sm="12" class="mt-3">
                                   <p>Hometown</p>
