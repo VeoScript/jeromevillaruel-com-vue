@@ -31,22 +31,22 @@
                       <b-col sm="12" class="mt-2">
                         <strong class="float-left i1">Web Development</strong>
                         <span class="float-right t2">90%</span> <br>
-                        <b-progress :value="90" variant="info"></b-progress>
+                        <b-progress :value="90" variant="secondary"></b-progress>
                       </b-col>
                       <b-col sm="12" class="mt-2">
                         <strong class="float-left i1">Desktop Development</strong>
                         <span class="float-right t2">80%</span> <br>
-                        <b-progress :value="80" variant="info"></b-progress>
+                        <b-progress :value="80" variant="secondary"></b-progress>
                       </b-col>
                       <b-col sm="12" class="mt-2">
                         <strong class="float-left i1">Mobile App Development</strong>
                         <span class="float-right t2">50%</span> <br>
-                        <b-progress :value="50" variant="info"></b-progress>
+                        <b-progress :value="50" variant="secondary"></b-progress>
                       </b-col>
                       <b-col sm="12" class="mt-2">
                         <strong class="float-left i1">Networking</strong>
                         <span class="float-right t2">75%</span> <br>
-                        <b-progress :value="75" variant="info"></b-progress>
+                        <b-progress :value="75" variant="secondary"></b-progress>
                       </b-col>
                     </b-row>
                 </b-col>
@@ -167,7 +167,7 @@
   margin-top:10px;
 }
 .user-detail-section2 span{
-  color:#7CBBC3;
+  color:#3F67B3;
   font-size: 14px;
 }
 .user-detail-section2 small{
