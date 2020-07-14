@@ -8,10 +8,10 @@
           <b-col md="3" sm="3" class="user-profil-part pull-left">
             <b-row>
               <b-col md="12" sm="12" class="user-image text-center">
-                <img :src="require('@/assets/photos/veo.jpg')">
+                <b-img :src="require('@/assets/photos/veo.jpg')" rounded="circle" />
               </b-col>
               <b-col md="12" sm="12" class="user-detail-section1 text-center">
-                <button class="btn btn-defult follow "> Download Resume</button> <br>
+                <button class="btn btn-defult resume"> Download Resume</button> <br>
               </b-col>
               <b-row class="user-detail-row">
                 <b-col md="12" sm="12" class="user-detail-section2 pull-left">
@@ -70,12 +70,91 @@
               </b-col>
               <b-col md="12">
                 <b-row>
-                  <b-col md="8" class="profile-tag-section text-center">
+                  <b-col md="8" class="profile-tag-section">
                     <div>
                       <b-tabs content-class="mt-3 abouttabs" fill>
-                        <b-tab title="Basic Info" active><p>Basic Info</p></b-tab>
-                        <b-tab title="Work Experience"><p>I'm the second tab</p></b-tab>
-                        <b-tab title="Developers"><p>I'm the second tab</p></b-tab>
+                        <b-tab title="Basic Info" active>
+                          <b-row class="user-detail-row">
+                            <b-col md="12" sm="12" class="user-detail-section2 pull-left mb-5">
+                              <b-row>
+                                <b-col md="2" sm="2" class="mt-3">
+                                  <p>Age</p>
+                                  <span>22</span>
+                                </b-col>
+                                <b-col md="4" sm="4" class="mt-3">
+                                  <p>Birthdate</p>
+                                  <span>September 13, 1998</span>
+                                </b-col>
+                                <b-col md="3" sm="3" class="mt-3">
+                                  <p>Religion</p>
+                                  <span>Roman Catholic</span>
+                                </b-col>
+                                <b-col md="2" sm="2" class="mt-3">
+                                  <p>Gender</p>
+                                  <span>Male</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <p>Hometown</p>
+                                  <span>#928 Bonifacion St. Brgy. Guerrero, Bato, Leyte, Philippines</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <p>Current Address</p>
+                                  <span>SPMI bldg. Brgy. Hilapnitan, Baybay City, Leyte, Philippines</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <p>Bio</p>
+                                  <span>
+                                    To say I dabble would be understatement, design is my passion. I have a range of skills in the creative fields specializing in user experience & user interface design, interactive design and front-end development. I love solving problems and creating beautiful functional work.
+                                  </span>
+                                </b-col>
+                              </b-row>
+                            </b-col>
+                          </b-row>
+                        </b-tab>
+                        <b-tab title="Work Experience">
+                          <b-row class="user-detail-row">
+                            <b-col md="12" sm="12" class="user-detail-section2 pull-left mb-5">
+                              <b-row>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <h5>Specialty Pulp Manufacturing, Inc. (SPMI)</h5>
+                                  <p>IT COORDINATOR</p>
+                                  <span style="font-size: 11px;">February 2020 - Present</span><br>
+                                  <span style="font-size: 10px;">Brgy. Hilapnitan, Baybay City, Leyte, Philippines</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <h5>Puregold Price Club, Inc.</h5>
+                                  <p>Graphic Artist</p>
+                                  <span style="font-size: 11px;">August 2019 - December 2019</span><br>
+                                  <span style="font-size: 10px;">Bato & Baybay Leyte Branch</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <h5>Leyte IV Electric Cooperative, Inc. (LEYECO IV)</h5>
+                                  <p>IT SPECIALIST (OJT)</p>
+                                  <span style="font-size: 11px;">August 2018 - March 2019</span><br>
+                                  <span style="font-size: 10px;">Brgy. Lamak, Hilongos, Leyte, Philippines</span>
+                                </b-col>
+                              </b-row>
+                            </b-col>
+                          </b-row>
+                        </b-tab>
+                        <b-tab title="Developers">
+                          <b-row class="user-detail-row">
+                            <b-col md="12" sm="12" class="user-detail-section2 pull-left text-center mb-5">
+                              <b-row>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <h5>VEOSCRIPT</h5>
+                                  <p>- Jerome Villaruel</p>
+                                  <span style="font-size: 10px;">Owner of the website, Front-End Developer, System Analyst</span>
+                                </b-col>
+                                <b-col md="12" sm="12" class="mt-3">
+                                  <h5>ACATZK</h5>
+                                  <p>- Joshua Galit</p>
+                                  <span style="font-size: 10px;">Front-End & Back-End Developer</span>
+                                </b-col>
+                              </b-row>
+                            </b-col>
+                          </b-row>
+                        </b-tab>
                       </b-tabs>
                     </div>
                   </b-col>
@@ -147,10 +226,10 @@
   padding-bottom:30px;
   background-color:#FAFAFA;
 }
-.follow{
+.resume{
   width:50%;
   margin-top:70px;
-  font-size: 10px;
+  font-size: 11px;
   border:1px solid #DDDDDD;
   background-color: #fff;
   font-weight: lighter; 
