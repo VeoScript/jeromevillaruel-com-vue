@@ -1,6 +1,6 @@
 <template>
 
-  <app-bar>
+  <app-bar class="preventcopy">
 
     <nav-bar /> <!-- NAVIGATION BAR -->
 
@@ -70,6 +70,15 @@ export default {
       color: #42b983;
     }
   }
+}
+
+.preventcopy {
+-webkit-touch-callout: none; //iOS Safari
+-webkit-user-select: none; //Chrome/Safari/Opera
+-khtml-user-select: none; //Konqueror
+-moz-user-select: none; //Firefox
+-ms-user-select: none; //Internet Explorer/Edge
+user-select: none; //Non-prefixed version, currently not supported by any browser
 }
 
 hr{
