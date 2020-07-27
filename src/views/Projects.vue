@@ -5,7 +5,7 @@
           <b-card-img img-top :src="require('../assets/photos/projects/inventorysystem.png')" alt="Image" class="rounded-0"></b-card-img>
           <b-card-body title="Inventory Management and POS System">
             <b-card-text>
-              This program is implemented in LEYECO IV Leyte Electric Cooperative IV, Inc. <br>
+              This program was implemented in LEYECO IV Leyte Electric Cooperative IV, Inc. <br>
               -Written in C#.
             </b-card-text>
             <b-button id="btngotogithub" href="https://github.com/VeoScript/LeyecoIV-Inventory-Management-and-POS-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
@@ -15,7 +15,7 @@
           <b-card-img img-top :src="require('../assets/photos/projects/automatedenrollment.png')" alt="Image" class="rounded-0"></b-card-img>
           <b-card-body title="Automated Enrollment System">
             <b-card-text>
-              This program is implemented in 
+              This program was implemented in 
               DAFENHS Don Agustin F. Escaño National High School. <br>
               -Written in Visual Basic.
             </b-card-text>
@@ -34,6 +34,17 @@
           </b-card-body>
         </b-card>
         <b-card no-body id="card-about">
+          <b-card-img img-top :src="require('../assets/photos/projects/empinfosys.png')" alt="Image" class="rounded-0"></b-card-img>
+          <b-card-body title="Employees Information System">
+            <b-card-text>
+              This program was implemented in 
+              (SPMI) Specialty Pulp Manufacturing, Inc.<br>
+              -Written in Visual Basic.
+            </b-card-text>
+            <b-button id="btngotogithub" href="https://github.com/VeoScript/empinfosys" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+          </b-card-body>
+        </b-card>
+        <b-card no-body id="card-about">
           <b-card-img img-top :src="require('../assets/photos/projects/officialwebsite.png')" alt="Image" class="rounded-0"></b-card-img>
           <b-card-body title="VEOSCRIPT Official Website">
             <b-card-text>
@@ -42,16 +53,6 @@
               -Written in VUE.
             </b-card-text>
             <b-button id="btngotogithub" href="https://github.com/VeoScript/jeromevillaruel-official" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
-          </b-card-body>
-        </b-card>
-        <b-card no-body id="card-about">
-          <b-card-img img-top :src="require('../assets/photos/projects/TES.png')" alt="Image" class="rounded-0"></b-card-img>
-          <b-card-body title="Teacher Evaluation System">
-            <b-card-text>
-              Final project in Database Management System II. <br>
-              -Written in PHP.
-            </b-card-text>
-            <b-button id="btngotogithub" href="https://github.com/VeoScript/Teacher-Evaluation-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
           </b-card-body>
         </b-card>
         <b-card no-body id="card-about">
@@ -83,6 +84,16 @@
               -Written in PHP.
             </b-card-text>
             <b-button id="btngotogithub" href="https://github.com/VeoScript/GoRehab" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+          </b-card-body>
+        </b-card>
+        <b-card no-body id="card-about">
+          <b-card-img img-top :src="require('../assets/photos/projects/TES.png')" alt="Image" class="rounded-0"></b-card-img>
+          <b-card-body title="Teacher Evaluation System">
+            <b-card-text>
+              Final project in Database Management System II. <br>
+              -Written in PHP.
+            </b-card-text>
+            <b-button id="btngotogithub" href="https://github.com/VeoScript/Teacher-Evaluation-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
           </b-card-body>
         </b-card>
       </b-card-group>
