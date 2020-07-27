@@ -72,6 +72,7 @@ export default {
   }
 }
 
+//For Preveting Text Copying
 .preventcopy {
 -webkit-touch-callout: none; //iOS Safari
 -webkit-user-select: none; //Chrome/Safari/Opera
@@ -81,6 +82,7 @@ export default {
 user-select: none; //Non-prefixed version, currently not supported by any browser
 }
 
+//For ScrollBar 
 ::-webkit-scrollbar {
   width: 9px;
 }
