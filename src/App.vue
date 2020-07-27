@@ -81,6 +81,20 @@ export default {
 user-select: none; //Non-prefixed version, currently not supported by any browser
 }
 
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  border: 7px solid #272727;
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ECAB44;
+  border-radius: 50px;
+}
+
 hr{
   background: #3D529C;
 }
