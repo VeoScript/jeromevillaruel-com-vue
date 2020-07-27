@@ -47,7 +47,7 @@
                 Published on July 10, 2020 <br>
                 Genre: POP / HIPHOP
                 <hr>
-                <b-button id="btngotogithub" href="https://www.youtube.com/watch?v=RzITyhDyZA0" variant="primary" target="_blank" size="sm">View on Youtube</b-button>
+                <b-button id="btngotoyoutube" href="https://www.youtube.com/watch?v=RzITyhDyZA0" variant="primary" target="_blank" size="sm">View on Youtube</b-button>
               </b-card-text>
             </b-card-body>
           </b-col>
@@ -70,7 +70,7 @@
                 Published on June 26, 2020 <br>
                 Genre: POP / HIPHOP
                 <hr>
-                <b-button id="btngotogithub" href="https://www.youtube.com/watch?v=SkMMYNiikII" variant="primary" target="_blank" size="sm">View on Youtube</b-button>
+                <b-button id="btngotoyoutube" href="https://www.youtube.com/watch?v=SkMMYNiikII" variant="primary" target="_blank" size="sm">View on Youtube</b-button>
               </b-card-text>
             </b-card-body>
           </b-col>
@@ -117,6 +117,11 @@
     height: 5px;
     border-radius: 50px;
     opacity: 0.5;
+    border: none;
+  }
+
+  #btngotoyoutube{
+    background: #495DAC;
     border: none;
   }
 
