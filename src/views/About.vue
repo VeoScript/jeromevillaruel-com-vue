@@ -176,8 +176,8 @@
                       <b-col md="12" class="image-right-detail-section2">
                         <p>THE VEOSCRIPT</p>
                         <span>
-                          Siyam na kilometro at bangin ang iyong lalakbayin, mabayaran mo lang ang iyong pagiging taksil.
-                          Mas pinili mo ang landas ng siyam, imbis na sa ikatlo ka mapunta di mo yun nagawa dahil sa pagiging suwail.
+                          lagi mong tatandaan "tahimik lang ang ahas"
+                          maingay man ang aso pero mapagkakatiwalaan
                           <br>
                           -Jerome Villaruel
                         </span>
