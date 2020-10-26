@@ -8,7 +8,7 @@
               This program was implemented in Specialty Pulp Manufacturing, Inc. (SPMI).  <br>
               -Written in VUE JS.
             </b-card-text>
-            <b-button id="btngotogithub" href="https://github.com/VeoScript/LeyecoIV-Inventory-Management-and-POS-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+            <b-button id="btngotogithub" href="https://github.com/VeoScript/spmi-health-declaration" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
           </b-card-body>
         </b-card>
         <b-card no-body id="card-about">
