@@ -4,7 +4,7 @@
         <b-row class="justify-content-center container">
           <b-col sm="3">
             <b-img class="ologo" fluid src="@/assets/photos/logoveo.png" width="150"></b-img>
-            <p class="cname">Veoscript Official Website & Portfolio</p>
+            <p class="cname">Official Website & Portfolio</p>
             <span class="cname">
               Im a full stack developer and freelance web designer based Philippines. I create innovative solutions that make your product or service more effective in the marketplace.
             </span>
