@@ -2,6 +2,16 @@
   <div class="projects">
     <b-card-group columns class="p-3">
         <b-card no-body id="card-about">
+          <b-card-img img-top :src="require('../assets/photos/projects/chd.png')" alt="Image" class="rounded-0"></b-card-img>
+          <b-card-body title="Covid-19 Health Declaration System">
+            <b-card-text>
+              This program was implemented in Specialty Pulp Manufacturing, Inc. (SPMI).  <br>
+              -Written in VUE JS.
+            </b-card-text>
+            <b-button id="btngotogithub" href="https://github.com/VeoScript/LeyecoIV-Inventory-Management-and-POS-System" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
+          </b-card-body>
+        </b-card>
+        <b-card no-body id="card-about">
           <b-card-img img-top :src="require('../assets/photos/projects/inventorysystem.png')" alt="Image" class="rounded-0"></b-card-img>
           <b-card-body title="Inventory Management and POS System">
             <b-card-text>
@@ -50,7 +60,7 @@
             <b-card-text>
               Official website of Jerome Villaruel <br>
               Contributors : VeoScript & Acatzk <br>
-              -Written in VUE.
+              -Written in VUE JS.
             </b-card-text>
             <b-button id="btngotogithub" href="https://github.com/VeoScript/jeromevillaruel-official" variant="primary" target="_blank" size="sm">View repository on Github</b-button>
           </b-card-body>
