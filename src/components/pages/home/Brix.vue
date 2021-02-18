@@ -33,6 +33,27 @@
       <b-card no-body id="card-about" class="overflow-hidden mt-2" style="max-width: 1000px;">
         <b-row no-gutters>
           <b-col md="6">
+            <b-card-img :src="require('@/assets/photos/songs/forgave_me.png')" alt="Image" class="rounded-0"></b-card-img>
+          </b-col>
+          <b-col md="6">
+            <b-card-body title="YOU FORGAVE ME">
+              <b-card-text>
+                This song was all about relationship and a lover's quarrel story.
+                <br>
+                <br>
+                Original Composition of Jerome Villaruel <br>
+                Published on September 1, 2020 <br>
+                Genre: POP / HIPHOP
+                <hr>
+                <b-button id="btngotoyoutube" href="https://www.youtube.com/watch?v=YDH5iB6gAts" variant="primary" target="_blank" size="sm">View on Youtube</b-button>
+              </b-card-text>
+            </b-card-body>
+          </b-col>
+        </b-row>
+      </b-card>
+      <b-card no-body id="card-about" class="overflow-hidden mt-2" style="max-width: 1000px;">
+        <b-row no-gutters>
+          <b-col md="6">
             <b-card-img :src="require('@/assets/photos/songs/limitado.jpg')" alt="Image" class="rounded-0"></b-card-img>
           </b-col>
           <b-col md="6">
